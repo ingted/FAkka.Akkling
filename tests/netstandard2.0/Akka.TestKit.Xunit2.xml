@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Akka.TestKit.Xunit2</name>
+    </assembly>
+    <members>
+        <member name="T:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute">
+            <summary>
+            <para>
+            This custom XUnit Fact attribute will skip unit tests if the environment variable
+            "XUNIT_SKIP_LOCAL_FACT" exists and is set to the string "true"
+            </para>
+            <para>
+            Note that the original <see cref="P:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute.Skip"/> property takes precedence over this attribute,
+            any unit tests with <see cref="T:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute"/> with its <see cref="P:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute.Skip"/> property
+            set will always be skipped, regardless of the environment variable content.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute.Skip">
+            <summary>
+            Marks the test so that it will not be run, and gets or sets the skip reason
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute.SkipLocal">
+            <summary>
+            The reason why this unit test is being skipped by the <see cref="T:Akka.TestKit.Xunit2.Attributes.LocalFactAttribute"/>.
+            Note that the original <see cref="P:Xunit.FactAttribute.Skip"/> property takes precedence over this message. 
+            </summary>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute">
+            <summary>
+            <para>
+            This custom XUnit Fact attribute will skip unit tests if the environment variable
+            "XUNIT_SKIP_LOCAL_THEORY" exists and is set to the string "true"
+            </para>
+            <para>
+            Note that the original <see cref="P:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute.Skip"/> property takes precedence over this attribute,
+            any unit tests with <see cref="T:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute"/> with its <see cref="P:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute.Skip"/> property
+            set will always be skipped, regardless of the environment variable content.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute.Skip">
+            <summary>
+            Marks the test so that it will not be run, and gets or sets the skip reason
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute.SkipLocal">
+            <summary>
+            The reason why this unit test is being skipped by the <see cref="T:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute"/>.
+            Note that the original <see cref="P:Akka.TestKit.Xunit2.Attributes.LocalTheoryAttribute.Skip"/> property takes precedence over this message. 
+            </summary>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute">
+            <summary>
+            <para>
+            This custom XUnit Fact attribute will skip unit tests if the run-time environment is not windows
+            </para>
+            <para>
+            Note that the original <see cref="P:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute.Skip"/> property takes precedence over this attribute,
+            any unit tests with <see cref="T:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute"/> with its <see cref="P:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute.Skip"/> property
+            set will always be skipped, regardless of the environment variable content.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute.Skip">
+            <summary>
+            Marks the test so that it will not be run, and gets or sets the skip reason
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute.SkipUnix">
+            <summary>
+            The reason why this unit test is being skipped by the <see cref="T:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute"/>.
+            Note that the original <see cref="P:Akka.TestKit.Xunit2.Attributes.WindowsFactAttribute.Skip"/> property takes precedence over this message. 
+            </summary>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparer`1">
+            <summary>
+            Default implementation of <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> used by the Akka's xUnit.net equality assertions.
+            Copy of xUnits code
+            https://github.com/xunit/xunit/blob/3e6ab94ca231a6d8c86e90d6e724631a0faa33b7/src/xunit.assert/Asserts/Sdk/AssertEqualityComparer.cs
+            <remarks>Note! Part of internal API. Breaking changes may occur without notice. Use at own risk.</remarks>
+            </summary>
+            <typeparam name="T">The type that is being compared.</typeparam>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparer`1.#ctor(System.Boolean,System.Collections.IEqualityComparer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparer`1" /> class.
+            </summary>
+            <param name="skipTypeCheck">Set to <c>true</c> to skip type equality checks.</param>
+            <param name="innerComparer">The inner comparer to be used when the compared objects are enumerable.</param>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparerAdapter`1">
+            <summary>
+            A class that wraps <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> to create <see cref="T:System.Collections.IEqualityComparer"/>.
+            Copy of xUnits class:
+            https://github.com/xunit/xunit/blob/3e6ab94ca231a6d8c86e90d6e724631a0faa33b7/src/xunit.assert/Asserts/Sdk/AssertEqualityComparerAdapter.cs
+            <remarks>Note! Part of internal API. Breaking changes may occur without notice. Use at own risk.</remarks>
+            </summary>
+            <typeparam name="T">The type that is being compared.</typeparam>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparerAdapter`1.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparerAdapter`1"/> class.
+            </summary>
+            <param name="innerComparer">The comparer that is being adapted.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparerAdapter`1.Equals(System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparerAdapter`1.GetHashCode(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Internals.AkkaEqualException">
+            <summary>
+            TBD
+            </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaEqualException.#ctor(System.Object,System.Object,System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.Internals.AkkaEqualException"/> class.
+            </summary>
+            <param name="expected">The expected value of the object</param>
+            <param name="actual">The actual value of the object</param>
+            <param name="format">A template string that describes the error.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.AkkaEqualException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.Internals.AkkaEqualException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.Internals.AkkaEqualException.Message">
+            <summary>
+            The message that describes the error.
+            </summary>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.Internals.TestOutputLogger">
+            <summary>
+            This class represents an actor that logs output from tests using an <see cref="T:Xunit.Abstractions.ITestOutputHelper"/> provider.
+            </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.Internals.TestOutputLogger.#ctor(Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.Internals.TestOutputLogger"/> class.
+            </summary>
+            <param name="output">The provider used to write test output.</param>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.TestKit">
+            <summary>
+            This class represents an Akka.NET TestKit that uses <a href="https://xunit.github.io/">xUnit</a>
+            as its testing framework.
+            </summary>
+        </member>
+        <member name="F:Akka.TestKit.Xunit2.TestKit.Output">
+            <summary>
+            The provider used to write test output.
+            </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.#ctor(Akka.Actor.ActorSystem,Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            <para>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.TestKit"/> class.
+            </para>
+            <para>
+            If no <paramref name="system"/> is passed in, a new system with
+            <see cref="P:Akka.TestKit.Xunit2.TestKit.DefaultConfig"/> will be created.
+            </para>
+            </summary>
+            <param name="system">The actor system to use for testing. The default value is <see langword="null"/>.</param>
+            <param name="output">The provider used to write test output. The default value is <see langword="null"/>.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.#ctor(Akka.Actor.Setup.ActorSystemSetup,System.String,Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.TestKit"/> class.
+            </summary>
+            <param name="config">The <see cref="T:Akka.Actor.Setup.Setup"/> to use for configuring the ActorSystem.</param>
+            <param name="actorSystemName">The name of the system. The default name is "test".</param>
+            <param name="output">The provider used to write test output. The default value is <see langword="null"/>.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.#ctor(Akka.Configuration.Config,System.String,Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.TestKit"/> class.
+            </summary>
+            <param name="config">The configuration to use for the system.</param>
+            <param name="actorSystemName">The name of the system. The default name is "test".</param>
+            <param name="output">The provider used to write test output. The default value is <see langword="null"/>.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.#ctor(System.String,Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.TestKit.Xunit2.TestKit"/> class.
+            </summary>
+            <param name="config">The configuration to use for the system.</param>
+            <param name="output">The provider used to write test output. The default value is <see langword="null"/>.</param>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.TestKit.DefaultConfig">
+            <summary>
+            A configuration that has just the default log settings enabled. The default settings can be found in
+            <a href="https://github.com/akkadotnet/akka.net/blob/master/src/core/Akka.TestKit/Internal/Reference.conf">Akka.TestKit.Internal.Reference.conf</a>.
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.TestKit.FullDebugConfig">
+            <summary>
+            A configuration that has all log settings enabled
+            </summary>
+        </member>
+        <member name="P:Akka.TestKit.Xunit2.TestKit.Assertions">
+            <summary>
+            Commonly used assertions used throughout the testkit.
+            </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.AfterAllAsync">
+             <summary>
+             This method is called when a test ends.
+            
+             <remarks>
+             If you override this, then make sure you either call base.AfterAllAsync()
+             to shut down the system. Otherwise a memory leak will occur.
+             </remarks>
+             </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.TestKit.InitializeLogger(Akka.Actor.ActorSystem)">
+            <summary>
+            Initializes a new <see cref="T:Akka.TestKit.Xunit2.Internals.TestOutputLogger"/> used to log messages.
+            </summary>
+            <param name="system">The actor system used to attach the logger</param>
+        </member>
+        <member name="T:Akka.TestKit.Xunit2.XunitAssertions">
+            <summary>
+            This class contains several common assert patterns used throughout this testkit.
+            </summary>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.XunitAssertions.Fail(System.String,System.Object[])">
+            <summary>
+            Fails an assertion without checking any conditions.
+            </summary>
+            <param name="format">A template string to display if the assertion fails.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.XunitAssertions.AssertTrue(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Verifies that a specified <paramref name="condition"/> is true.
+            </summary>
+            <param name="condition">The condition that is being verified.</param>
+            <param name="format">A template string to display if the assertion fails.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.XunitAssertions.AssertFalse(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Verifies that a specified <paramref name="condition"/> is false.
+            </summary>
+            <param name="condition">The condition that is being verified.</param>
+            <param name="format">A template string to display if the assertion fails.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.XunitAssertions.AssertEqual``1(``0,``0,System.String,System.Object[])">
+            <summary>
+            Verifies that the two specified values (<paramref name="expected"/> and <paramref name="actual"/>
+            are equal using the built-in comparison function <see cref="T:Akka.TestKit.Xunit2.Internals.AkkaAssertEqualityComparer`1"/>.
+            </summary>
+            <typeparam name="T">The type that is being compared.</typeparam>
+            <param name="expected">The expected value of the object</param>
+            <param name="actual">The actual value of the object</param>
+            <param name="format">A template string to display if the assertion fails.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+            <exception cref="T:Akka.TestKit.Xunit2.Internals.AkkaEqualException">
+            This exception is thrown when the two specified values are not equal.
+            </exception>
+        </member>
+        <member name="M:Akka.TestKit.Xunit2.XunitAssertions.AssertEqual``1(``0,``0,System.Func{``0,``0,System.Boolean},System.String,System.Object[])">
+            <summary>
+            Verifies that the two specified values (<paramref name="expected"/> and <paramref name="actual"/>
+            are equal using a specified comparison function <paramref name="comparer"/>.
+            </summary>
+            <typeparam name="T">The type that is being compared.</typeparam>
+            <param name="expected">The expected value of the object</param>
+            <param name="actual">The actual value of the object</param>
+            <param name="comparer">The function used to compare the two specified values.</param>
+            <param name="format">A template string to display if the assertion fails.</param>
+            <param name="args">An optional object array that contains zero or more objects to format.</param>
+            <exception cref="T:Akka.TestKit.Xunit2.Internals.AkkaEqualException">
+            This exception is thrown when the two specified values are not equal.
+            </exception>
+        </member>
+    </members>
+</doc>

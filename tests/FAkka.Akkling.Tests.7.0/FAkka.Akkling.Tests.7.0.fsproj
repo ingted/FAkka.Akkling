@@ -38,11 +38,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
+  <!--<ItemGroup>
     <Reference Include="Akka.Streams.TestKit">
       <HintPath>C:\Program Files\dotnet\sdk\7.0.100\FSharp\library-packs\Akka.Streams.TestKit.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup>-->
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="7.0.0" />
   </ItemGroup>
