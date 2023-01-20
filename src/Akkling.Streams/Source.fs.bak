@@ -76,8 +76,7 @@ module Source =
         Source.FromObservable(observable, maxCapacity, overflowStrategy).MapMaterializedValue(Func<NotUsed,unit>(ignore))
         
     /// Create a source with one element.
-    let inline singleton (elem: 't) = //: Source<'t, unit> = 
-        Source.Single(elem).MapMaterializedValue(Func<NotUsed, Akka.NotUsed>(fun _ -> Akka.NotUsed.Instance))
+    let inline singleton (elem: 't) : Source<'t, unit> = Source.Single(elem).MapMaterializedValue(Func<NotUsed,unit>(ignore))
 
     /// Transforms only the materialized value of the Source.
     let inline mapMaterializedValue (fn: 'mat -> 'mat2) (source: Source<'t, 'mat>) : Source<'t, 'mat2> =
@@ -564,7 +563,7 @@ module Source =
     /// The task completes with success when received complete message from upstream or cancel
     /// from downstream. It fails with the same error when received error message from
     /// downstream.
-    let inline watchTermination (matFn: 'mat -> Async<Akka.Done> -> 'mat2) (source) : Source<'t, 'mat2> =
+    let inline watchTermination (matFn: 'mat -> Async<unit> -> 'mat2) (source) : Source<'t, 'mat2> =
         SourceOperations.WatchTermination(source, Func<_,_,_>(fun m t -> matFn m (t |> Async.AwaitTask)))
       
     /// Materializes to IFlowMonitor that allows monitoring of the the current flow. All events are propagated

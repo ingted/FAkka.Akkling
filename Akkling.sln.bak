@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33103.184
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
 	ProjectSection(SolutionItems) = preProject
@@ -45,8 +45,6 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Akkling.Streams.TestKit", "
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Akkling.Hocon", "src\Akkling.Hocon\Akkling.Hocon.fsproj", "{4E04FB08-075D-4E83-8644-B0A5382E78EF}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Akkling.Tests.7.0", "tests\Akkling.Tests.7.0\Akkling.Tests.7.0.fsproj", "{D3A0B42B-3065-4726-9B8D-9A2054F303F6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,10 +87,6 @@ Global
 		{4E04FB08-075D-4E83-8644-B0A5382E78EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E04FB08-075D-4E83-8644-B0A5382E78EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E04FB08-075D-4E83-8644-B0A5382E78EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3A0B42B-3065-4726-9B8D-9A2054F303F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3A0B42B-3065-4726-9B8D-9A2054F303F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3A0B42B-3065-4726-9B8D-9A2054F303F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3A0B42B-3065-4726-9B8D-9A2054F303F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

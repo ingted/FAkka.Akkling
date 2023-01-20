@@ -2,12 +2,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageLicenseUrl>https://github.com/Horusiath/Akkling/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Horusiath/Akkling</PackageProjectUrl>
-    <Authors>Bartosz Sypytkowski</Authors>
     <Version>0.12.0</Version>
-    <Description>F# wrapper library for Akka.NET with reactive streams support</Description>
-    <PackageTags>akka.net fsharp reactive streams</PackageTags>
+    <Authors>Bartosz Sypytkowski</Authors>
+    <Description>F# wrapper library for Akka.NET cluster sharding module.</Description>
+    <PackageLicenseUrl>https://github.com/Horusiath/Akkling/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>Bartosz Sypytkowski</Copyright>
+    <PackageProjectUrl>https://github.com/Horusiath/Akkling</PackageProjectUrl>
+    <PackageTags>akka.net fsharp cluster sharding</PackageTags>
     <PackageReleaseNotes>
       * Upgraded Akka.NET dependencies to 1.4.27
       * Exposed Akkling.Persistence API for snapshots.
@@ -18,26 +19,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Framing.fs" />
-    <Compile Include="Prolog.fs" />
-    <Compile Include="Stages.fs" />
-    <Compile Include="Sink.fs" />
-    <Compile Include="SubFlow.fs" />
-    <Compile Include="BidiFlow.fs" />
-    <Compile Include="Graph.fs" />
-    <Compile Include="Flow.fs" />
-    <Compile Include="KillSwitch.fs" />
-    <Compile Include="Source.fs" />
-    <Compile Include="WithContext.fs" />
-    <Compile Include="Tcp.fs" />
+    <Compile Include="ClusterExtensions.fs" />
+    <Compile Include="ClusterSingleton.fs" />
+    <Compile Include="DistributedPubSub.fs" />
+    <Compile Include="ClusterClient.fs" />
+    <Compile Include="EntityRef.fs" />
+    <Compile Include="ClusterSharding.fs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Akkling.DistributedData\Akkling.DistributedData.fsproj" />
+    <ProjectReference Include="..\Akkling.Persistence\Akkling.Persistence.fsproj" />
     <ProjectReference Include="..\Akkling\Akkling.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Akka.Streams" Version="1.5.0-alpha3" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="7.0.0" />
+    <PackageReference Include="Akka.Cluster.Sharding" Version="1.4.27" />
+    <PackageReference Update="FSharp.Core" Version="6.0.4" />
   </ItemGroup>
 </Project>

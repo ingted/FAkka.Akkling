@@ -2,10 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.12.0</Version>
+    <PackageTags>akka.net fsharp testing fscheck</PackageTags>
     <Authors>Bartosz Sypytkowski</Authors>
-    <Description>F# wrapper library for Akka.NET Streams TestKit library using FsCheck and xUnit.</Description>
-    <PackageTags>akka.net streams fsharp testing fscheck reactive streams</PackageTags>
+    <Version>0.12.0</Version>
+    <Description>F# wrapper library for Akka.NET TestKit library using FsCheck and xUnit.</Description>
     <PackageLicenseUrl>https://github.com/Horusiath/Akkling/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Horusiath/Akkling</PackageProjectUrl>
     <PackageReleaseNotes>
@@ -17,16 +17,13 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="TestKit.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Akkling.TestKit\Akkling.TestKit.fsproj" />
     <ProjectReference Include="..\Akkling\Akkling.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Akka.Streams.TestKit" Version="1.5.0-alpha3" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="7.0.0" />
+    <PackageReference Include="Akka.TestKit.Xunit2" Version="1.4.27" />
+    <PackageReference Update="FSharp.Core" Version="6.0.4" />
   </ItemGroup>
 </Project>

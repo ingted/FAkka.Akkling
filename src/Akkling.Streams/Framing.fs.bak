@@ -52,13 +52,13 @@ module Framing =
     /// {{{
     ///     [4 bytes length field, Big Endian][User Payload]
     /// }}}
-    let inline simpleProtocol (maxLength: int) = //: BidiFlow<ByteString, ByteString, ByteString, ByteString, unit> =
+    let inline simpleProtocol (maxLength: int): BidiFlow<ByteString, ByteString, ByteString, ByteString, unit> =
         BidiFlow.FromFlowsMat(
             Akka.Streams.Dsl.Framing.SimpleFramingProtocolEncoder(maxLength), 
             Akka.Streams.Dsl.Framing.SimpleFramingProtocolDecoder(maxLength), 
-            Func<_,_,_>(notUsed2))
+            Func<_,_,unit>(fun _ _ -> ()))
 
     /// Returns a Flow that implements a "brace counting" based framing stage for emitting valid JSON chunks.
     /// It scans the incoming data stream for valid JSON objects and returns chunks of ByteStrings containing only those valid chunks.
-    let inline json (maxObjectLength: int) = //: Flow<ByteString, ByteString, unit> =
-        Akka.Streams.Dsl.JsonFraming.ObjectScanner(maxObjectLength).MapMaterializedValue(Func<_,_>(notUsed))
+    let inline json (maxObjectLength: int): Flow<ByteString, ByteString, unit> =
+        Akka.Streams.Dsl.JsonFraming.ObjectScanner(maxObjectLength).MapMaterializedValue(Func<_,_>(ignore))
