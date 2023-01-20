@@ -25,7 +25,7 @@ let testConfig = Akka.TestKit.Configs.TestConfigs.TestSchedulerConfig
 /// <param name="fn">Test case function</param>
 let test (config : Akka.Configuration.Config) (fn : Tck -> unit) =
     use system = System.create "test-system" (config.WithFallback testConfig)
-    use tck = new TestKit(system)
+    let tck = new TestKit(system)
     fn tck
 
 /// <summary>
@@ -33,7 +33,7 @@ let test (config : Akka.Configuration.Config) (fn : Tck -> unit) =
 /// </summary>
 let testDefault fn = 
     use system = System.create "test-system" testConfig
-    use tck = new TestKit(system)
+    let tck = new TestKit(system)
     fn tck
 
 let inline probe (tck: Tck) : TestProbe = tck.CreateTestProbe()
