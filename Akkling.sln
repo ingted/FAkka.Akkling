@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{8CC185AC-1D97-41F9-BBF1-09D892CA18B9}"
 	ProjectSection(SolutionItems) = preProject
 		examples\at-least-once-delivery.fsx = examples\at-least-once-delivery.fsx
+		examples\at-least-once-delivery_my.fsx = examples\at-least-once-delivery_my.fsx
 		examples\basic.fsx = examples\basic.fsx
 		examples\cluster-nodes-status.fsx = examples\cluster-nodes-status.fsx
 		examples\cluster-sharding.fsx = examples\cluster-sharding.fsx
@@ -23,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{8C
 		examples\lifecycle.fsx = examples\lifecycle.fsx
 		examples\persistence-streams.fsx = examples\persistence-streams.fsx
 		examples\persistence.fsx = examples\persistence.fsx
+		examples\persistence_my.fsx = examples\persistence_my.fsx
 		examples\remote.fsx = examples\remote.fsx
 		examples\streams.fsx = examples\streams.fsx
 	EndProjectSection
@@ -46,6 +48,11 @@ EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Akkling.Hocon", "src\Akkling.Hocon\Akkling.Hocon.fsproj", "{4E04FB08-075D-4E83-8644-B0A5382E78EF}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Akkling.Tests.7.0", "tests\Akkling.Tests.7.0\Akkling.Tests.7.0.fsproj", "{D3A0B42B-3065-4726-9B8D-9A2054F303F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{ACEB2D2E-96F2-4478-A99B-E3EA90E5CA94}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.ps1 = nuget.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
