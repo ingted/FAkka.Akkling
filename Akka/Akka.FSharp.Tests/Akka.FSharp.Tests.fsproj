@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--<Import Project="..\..\common.props" />-->
+  <Import Project="..\xunitSettings.props" />
+
+  <PropertyGroup>
+	  <TargetFramework>net7.0</TargetFramework>
+    <AssemblyTitle>Akka.FSharp.Tests</AssemblyTitle>
+    <TargetFrameworks>$(NetCoreTestVersion)</TargetFrameworks>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Tests.fs" />
+    <Compile Include="ApiTests.fs" />
+    <Compile Include="ComputationExpression.fs" />
+    <Compile Include="InfrastructureTests.fs" />
+      <Compile Include="RemoteSpecs.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="SerializationSpecs.fs" />    
+    <!--<ProjectReference Include="..\..\contrib\serializers\Akka.Serialization.Hyperion\Akka.Serialization.Hyperion.csproj" />-->    
+    <ProjectReference Include="..\Akka.FSharp\Akka.FSharp.fsproj" />    
+    <ProjectReference Include="..\Akka.Tests.Shared.Internals\Akka.Tests.Shared.Internals.csproj" />
+    <!--<ProjectReference Include="..\Akka.Remote\Akka.Remote.csproj" />-->
+    <!--<ProjectReference Include="..\Akka.Tests.Shared.Internals\Akka.Tests.Shared.Internals.csproj" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="7.0.0" />
+	  <PackageReference Include="Akka.Remote" Version="1.5.0-alpha3" />
+	  <PackageReference Include="Akka.Serialization.Hyperion" Version="1.5.0-alpha3" />
+	  <PackageReference Include="Akka.Cluster.Tools" Version="1.5.0-alpha3" />
+    <!--<PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(TestSdkVersion)" />
+    <PackageReference Include="xunit" Version="$(XunitVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(XunitVersion)" />-->
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0-preview-20221221-03" />
+	  <PackageReference Include="xunit" Version="2.4.2" />
+	  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+	  <PackageReference Include="Akka.TestKit.Xunit2" Version="1.5.0-alpha3" />
+  </ItemGroup>
+
+    <PropertyGroup Condition=" '$(TargetFramework)' == '$(NetCoreTestVersion)' OR '$(TargetFramework)' == '$(NetTestVersion)'">
+        <DefineConstants>$(DefineConstants);CORECLR</DefineConstants>
+    </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);CORECLR</DefineConstants>
+  </PropertyGroup>
+
+</Project>

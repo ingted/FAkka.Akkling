@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <!--<Import Project="..\..\common.props" />-->
+
+    <PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+        <AssemblyTitle>Akka.Persistence.FSharp</AssemblyTitle>
+        <Description>F# API for persistence actors in Akka.NET</Description>
+        
+        <PackageTags>akka;actors;actor model;Akka;concurrency;F#;Fsharp;persistence;eventsource</PackageTags>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<EnablePackageValidation>true</EnablePackageValidation>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<OutputPath>./bin</OutputPath>
+		<IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+		<IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+		<IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Authors />
+		<Description />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="LICENSE.txt" />
+        <None Include="PostBuildEvent.Linux.ps1" />
+        <None Include="PostBuildEvent.ps1" />
+        <None Include="README.md" />
+    </ItemGroup>
+
+
+    <!--<ItemGroup>
+        <ProjectReference Include="..\Akka.FSharp\Akka.FSharp.fsproj" />
+        <ProjectReference Include="..\Akka.Persistence\Akka.Persistence.csproj" />
+    </ItemGroup>-->
+
+
+	<ItemGroup Condition="'$(IsWindows)'=='true'">
+		<PackageReference Include="FAkka.Akka.FSharp" Version="1.0.*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(IsLinux)'=='true'">
+		<PackageReference Include="FAkka.Akka.FSharp.Linux" Version="1.0.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Akka.Persistence" Version="1.5.0-alpha3" />
+	</ItemGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+    </PropertyGroup>
+
+
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Version></Version>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath=""  />
+	</ItemGroup>
+	<ItemGroup>
+
+		<None Include="LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+
+
+	<PropertyGroup Condition="'$(IsWindows)'=='true'">
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(IsLinux)'=='true'">
+		<PackageId>FAkka.$(AssemblyName).Linux</PackageId>
+	</PropertyGroup>
+
+
+
+	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(IsWindows)'=='true' AND '$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+	</Target>
+
+	<Target Name="PostPackNugetDeployLinux" AfterTargets="Pack" Condition="'$(IsLinux)'=='true' AND '$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell ./PostBuildEvent.Linux.ps1 FAkka.$(AssemblyName).Linux" />
+	</Target>
+
+	<PropertyGroup Condition="'$(IsWindows)'=='true'">
+		<DefineConstants>Windows</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(IsOSX)'=='true'">
+		<DefineConstants>OSX</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(IsLinux)'=='true'">
+		<DefineConstants>Linux</DefineConstants>
+	</PropertyGroup>
+</Project>
