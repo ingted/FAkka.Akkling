@@ -39,7 +39,7 @@ module Graph =
 
     /// Executes provided graph using provided materializer.
     let run (mat: #IMaterializer) (graph: #IRunnableGraph<'mat>) =
-        graph.Run mat
+        graph.Run (mat :> IMaterializer)
 
     /// Transform only the materialized value of this RunnableGraph, leaving all other properties as they were.
     let inline mapMaterializedValue (fn: 'mat -> 'mat2) (graph: #IRunnableGraph<'mat>) : IRunnableGraph<'mat2> =

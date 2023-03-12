@@ -692,7 +692,7 @@ module Source =
 
     /// Connect this source to a sink and run it. The returned value is the materialized value of the sink
     let inline runWith (mat: #IMaterializer) (sink: #IGraph<SinkShape<'t>, 'mat2>) (source: Source<'t, 'mat>) : 'mat2 =
-        source.RunWith(sink, mat)
+        source.RunWith(sink, mat :> IMaterializer)
 
     /// Shortcut for running this source with a fold function.
     /// The given function is invoked for every received element, giving it its previous
@@ -701,7 +701,7 @@ module Source =
     /// function evaluation when the input stream ends, or completed with Failure
     /// if there is a failure signaled in the stream.
     let inline runFold (mat: #IMaterializer) (folder: 'state -> 't -> 'state) (zero: 'state) (source: Source<'t, 'mat>) : Async<'state> =
-        source.RunAggregate(zero, Func<_,_,_>(folder), mat) |> Async.AwaitTask
+        source.RunAggregate(zero, Func<_,_,_>(folder), mat :> IMaterializer) |> Async.AwaitTask
 
     /// Shortcut for running this surce with a reduce function.
     /// The given function is invoked for every received element, giving it its previous
@@ -710,7 +710,7 @@ module Source =
     /// function evaluation when the input stream ends, or completed with Failure
     /// if there is a failure signaled in the stream.
     let inline runReduce (mat: #IMaterializer) (folder: 't -> 't -> 't) (source: Source<'t, 'mat>) : Async<'t> =
-        source.RunSum(Func<_,_,_>(folder), mat) |> Async.AwaitTask
+        source.RunSum(Func<_,_,_>(folder), mat :> IMaterializer) |> Async.AwaitTask
 
     /// Shortcut for running this source with a foreach procedure. The given procedure is invoked
     /// for each received element.
@@ -718,7 +718,7 @@ module Source =
     /// normal end of the stream, or completed with Failure if there is a failure signaled in
     /// the stream.
     let inline runForEach (mat: #IMaterializer) (fn: 't -> unit) (source: Source<'t, 'mat>) : Async<unit> =
-        source.RunForeach(Action<_>(fn), mat) |> Async.AwaitTask
+        source.RunForeach(Action<_>(fn), mat :> IMaterializer) |> Async.AwaitTask
 
     /// A MergeHub is a special streaming hub that is able to collect streamed elements from a 
     /// dynamic set of producers
