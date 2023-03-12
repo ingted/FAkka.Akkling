@@ -1,3 +1,4 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
@@ -18,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{8C
 		examples\basic.fsx = examples\basic.fsx
 		examples\cluster-nodes-status.fsx = examples\cluster-nodes-status.fsx
 		examples\cluster-sharding.fsx = examples\cluster-sharding.fsx
+		examples\cluster-sharding_my.fsx = examples\cluster-sharding_my.fsx
 		examples\dist-pub-sub.fsx = examples\dist-pub-sub.fsx
 		examples\distributed-data.fsx = examples\distributed-data.fsx
 		examples\io.fsx = examples\io.fsx
@@ -25,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{8C
 		examples\persistence-streams.fsx = examples\persistence-streams.fsx
 		examples\persistence.fsx = examples\persistence.fsx
 		examples\persistence_my.fsx = examples\persistence_my.fsx
+		examples\persistence_my_persist_順序.fsx = examples\persistence_my_persist_順序.fsx
 		examples\remote.fsx = examples\remote.fsx
 		examples\streams.fsx = examples\streams.fsx
 	EndProjectSection

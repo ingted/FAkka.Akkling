@@ -33,7 +33,7 @@
     <ProjectReference Include="..\Akkling\Akkling.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Akka.Cluster.Sharding" Version="1.5.0-alpha3" />
+    <PackageReference Include="Akka.Cluster.Sharding" Version="1.4.49" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="7.0.0" />

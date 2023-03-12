@@ -1,6 +1,6 @@
 #r "nuget: Akka.Serialization.Hyperion"
 #r "nuget: Akkling"
-
+//alt-enter
 open System
 open Akkling
 open Akka.Actor
@@ -13,6 +13,7 @@ let behavior (m:Actor<_>) =
         match msg with
         | "stop" -> return Stop
         | "unhandle" -> return Unhandled
+        | "failed" -> failwith "omg"
         | x ->
             printfn "%s" x
             return! loop ()
@@ -22,6 +23,9 @@ let behavior (m:Actor<_>) =
 // 1. First approach - using explicit behavior loop
 let helloRef = spawnAnonymous system (props behavior)
 
+helloRef <! "failed"
+helloRef <! "failed_ttc"
+
 // 2. Second approach - using implicits
 let helloBehavior _ = function
     | "stop" -> stop ()
@@ -30,7 +34,7 @@ let helloBehavior _ = function
 
 helloRef <! "ok"        // "ok"
 helloRef <! "unhandle"
-helloRef <! "ok"        // "ok"
+helloRef <! "stop"      // "ok"
 
 // 3. Using receiver combinators
 //    - <|> executes right side always when left side was unhandled
@@ -73,3 +77,13 @@ let stateRef2 = spawnAnonymous system <| props(actorOf (looper []))
 stateRef2 <! "a"
 stateRef2 <! "b"
 stateRef2 <! "print"
+
+let a =
+    let mutable condition = true
+    while condition do
+        printfn "%s %A" "ff" 123
+        condition <- false
+
+
+let b = lazy(456)      
+b.Value

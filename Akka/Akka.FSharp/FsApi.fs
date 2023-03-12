@@ -16,6 +16,30 @@ module Serialization =
     open MBrace.FsPickler
     open Akka.Serialization
 
+    let mkPickler (resolver : IPicklerResolver) =
+        let intPickler = resolver.Resolve<int> ()
+        let strPickler = resolver.Resolve<string> ()
+
+        let writer (w : WriteState) (hs : System.Collections.Immutable.ImmutableHashSet<string>) =
+            intPickler.Write w "len" hs.Count
+            hs 
+            |> Seq.toArray
+            |> Array.iter (fun itm -> strPickler.Write w "itm" itm) 
+        
+
+        let reader (r : ReadState) =
+            let len : int = intPickler.Read r "len" 
+            let strArr = Array.init len (fun _ -> strPickler.Read r "itm")
+            System.Collections.Immutable.ImmutableHashSet.Create<string>(strArr)
+
+        Pickler.FromPrimitives(reader, writer)
+
+    let registry = new CustomPicklerRegistry()
+    registry.RegisterFactory mkPickler
+
+    let cache = PicklerCache.FromCustomPicklerRegistry registry
+
+
     let internal serializeToBinary (fsp:BinarySerializer) o = 
             use stream = new System.IO.MemoryStream()
             fsp.Serialize(stream, o)
@@ -28,7 +52,10 @@ module Serialization =
     // used for top level serialization
     type ExprSerializer(system) = 
         inherit Serializer(system)
-        let fsp = FsPickler.CreateBinarySerializer()
+        let registry = new CustomPicklerRegistry()
+        let fsp = FsPickler.CreateBinarySerializer(picklerResolver = cache)
+        //do
+        //    registry.DeclareSerializable<System.Collections.Immutable.ImmutableHashSet<string>>()
         override __.Identifier = 99
         override __.IncludeManifest = true        
         override __.ToBinary(o) = serializeToBinary fsp o        

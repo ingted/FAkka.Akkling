@@ -21,7 +21,10 @@
 		<Description />
     </PropertyGroup>
 
+    <ItemGroup />
+
     <ItemGroup>
+        <Compile Include="FsApi.fs" />
         <Content Include="LICENSE.txt" />
         <None Include="PostBuildEvent.Linux.ps1" />
         <None Include="PostBuildEvent.ps1" />
@@ -54,13 +57,13 @@
 
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<Version></Version>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 
 
 	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath=""  />
+		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 	<ItemGroup>
 
