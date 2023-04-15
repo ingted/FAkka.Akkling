@@ -39,8 +39,23 @@ let counter =
             }
         loop 0)
 
+
+   //1     C2 C1 人 
+   //2     C2 E1 人 C1 
+   //3        C2 人 E1 C1
+//!true operator 運算子 operand 運算元
+let a = Unchecked.defaultof<IActorRef<int>>
 counter <! Command Inc
 counter <! Command Inc
 counter <! Command Dec
+
+counter <! Event { Delta = 1 }
+
 async { let! reply = counter <? Command GetState
         printfn "Current state of %A: %i" counter reply } |> Async.RunSynchronously
+
+type AT =
+| O of int
+
+
+let plus1 a b = a + 1 //函數映射 mapping

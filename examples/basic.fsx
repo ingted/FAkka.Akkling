@@ -5,6 +5,31 @@ open System
 open Akkling
 open Akka.Actor
 
+type Larry = {
+    gf1: int
+    gf2: int
+}
+
+let allWhatLarryHas = {gf1 = 100; gf2 = 200}
+
+printfn "allWhatLarryHas -> %O" allWhatLarryHas
+printfn "allWhatLarryHas -> %A" allWhatLarryHas
+
+
+type AnibaSqueezed = 
+| NG of times : int
+| ES of times : int
+
+printfn "AnibaSqueezed -> %A"  (NG 88)
+
+let n88 = NG 88
+
+match n88 with
+| NG t -> printfn "(((%d))) %s" t "OMG"
+| ES _ ->
+    ()
+
+
 let system = System.create "basic-sys" <| Configuration.defaultConfig()
 
 let behavior (m:Actor<_>) =
@@ -13,7 +38,7 @@ let behavior (m:Actor<_>) =
         match msg with
         | "stop" -> return Stop
         | "unhandle" -> return Unhandled
-        | "failed" -> failwith "omg"
+        | "failed" -> return (failwith "omg" : ActorEffect<_>) 
         | x ->
             printfn "%s" x
             return! loop ()
@@ -23,8 +48,44 @@ let behavior (m:Actor<_>) =
 // 1. First approach - using explicit behavior loop
 let helloRef = spawnAnonymous system (props behavior)
 
+
+type PingPong =
+| Ping
+| Pong
+| Serve of IActorRef<PingPong>
+
+
+
+
+let genPlayer nm = spawn system nm (props (actorOf2 (fun mbox (m:PingPong) ->
+    
+    printfn "I (%A) received %A" mbox.Self.Path.Name m
+    match m with
+    | Ping -> 
+        mbox.Sender().Tell(Pong, mbox.Self.Underlying :?> IActorRef)
+    | Pong -> 
+        mbox.Sender().Tell(Ping, mbox.Self.Underlying :?> IActorRef)
+    | Serve iactorref -> iactorref <! Ping
+
+    
+    Ignore
+)))
+
+
+let player1 = genPlayer "anibal"
+let player2 = genPlayer "larry"
+
+player1 <! Serve player2
+
+
+
+
+
 helloRef <! "failed"
 helloRef <! "failed_ttc"
+
+helloRef <! "unhandle"
+helloRef <! "stop"
 
 // 2. Second approach - using implicits
 let helloBehavior _ = function

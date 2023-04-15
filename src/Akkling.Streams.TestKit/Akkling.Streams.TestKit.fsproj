@@ -9,7 +9,7 @@
     <PackageLicenseUrl>https://github.com/Horusiath/Akkling/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Horusiath/Akkling</PackageProjectUrl>
     <PackageReleaseNotes>
-      * Upgraded Akka.NET dependencies to 1.4.27
+      * Upgraded Akka.NET dependencies to 1.5
       * Exposed Akkling.Persistence API for snapshots.
       * Exposed WeaklyUp and Downed cluster node events.
     </PackageReleaseNotes>

@@ -49,12 +49,15 @@ let configWithPort port =
         """)
     config.WithFallback(ClusterSingletonManager.DefaultConfig())
 
-let behavior (ctx : Actor<_>) msg = printfn "%A received %s" (ctx.Self.Path.ToStringWithAddress()) msg |> ignored
+//let behavior (ctx : Actor<_>) msg = printfn "%A received %s" (ctx.Self.Path.ToStringWithAddress()) msg |> ignored
+let behavior (ctx : Actor<_>) msg = printfn "%A received %s" ((Cluster.Get ctx.System).RemotePathOf (ctx.Self.Underlying :?> IActorRef)) msg |> ignored
 
 // spawn two separate systems with shard regions on each of them
 
 let system1 = System.create "cluster-system" (configWithPort 5000)
 let fac1 = entityFactoryFor system1 "printer" <| props (actorOf2 behavior)
+
+fac1.ShardRegion
 
 // wait a while before starting a second system
 System.Threading.Thread.Sleep 5000
@@ -77,6 +80,9 @@ frank <! "hello Frank"
 
 // check which shards have been build on the second shard region
 
+system2.Terminate()
+
+//HA high availability
 System.Threading.Thread.Sleep(5000)
 
 open Akka.Cluster.Sharding

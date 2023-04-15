@@ -82,6 +82,16 @@ let fac2 = entityFactoryFor system2 "printer" <| props (actorOf2 behavior)
 System.Threading.Thread.Sleep 5000
 
 let entity1 = fac1.RefFor "shard-1" "entity-1"
+let entity1 = fac2.RefFor "shard-1" "entity-1"
+
+let c1 = Akka.Cluster.Cluster.Get system1
+
+//c1.JoinSeedNodes [|c1.SelfAddress|]
+
+c1.RemotePathOf (entity1.Underlying :?> IActorRef)
+system1.Terminate()
+
+
 let john = fac1.RefFor "shard-2" "john"
 let alice = fac1.RefFor "shard-3" "alice"
 let frank = fac1.RefFor "shard-4" "frank"

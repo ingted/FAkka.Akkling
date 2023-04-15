@@ -96,7 +96,7 @@ let actorRef, arr = async {
                     }
                     |> Async.RunSynchronously
 
-arr |> Async.Start
+arr |> Async.Ignore |> Async.Start
 
 let persistView pid (queue: ISourceQueue<obj>) =
     propsView pid (fun mailbox ->

@@ -34,10 +34,91 @@ module Serialization =
 
         Pickler.FromPrimitives(reader, writer)
 
-    let registry = new CustomPicklerRegistry()
-    registry.RegisterFactory mkPickler
+    
+    let iActorRefPickler<'T> (extendedSystem: ExtendedActorSystem) (resolver : IPicklerResolver) =
+        let strPickler = resolver.Resolve<string> ()
 
-    let cache = PicklerCache.FromCustomPicklerRegistry registry
+        let writer (w : WriteState) (iaref : 'T) = //IActorRef) =
+            strPickler.Write w "path" (Serialization.SerializedActorPath(box iaref :?> IActorRef))
+
+        let reader (r : ReadState) =
+            let path = strPickler.Read r "path"
+            box (extendedSystem.Provider.ResolveActorRef(path)) :?> 'T
+
+        Pickler.FromPrimitives(reader, writer)
+        
+
+    
+    let genPathPickler<'T when 'T :> ActorPath 
+        //and 'S : (member Parent: ActorPath)
+        > () =
+
+        let pathPickler (resolver : IPicklerResolver) =
+            //let boolPickler = resolver.Resolve<bool> ()
+            let int64Pickler = resolver.Resolve<int64> ()
+            let intPickler = resolver.Resolve<int> ()
+            let strPickler = resolver.Resolve<string> ()
+            let addrPickler = resolver.Resolve<Address> ()
+    
+            let writer (w : WriteState) (apo : 'T) =
+                let writerSimple (w : WriteState) (ap : RootActorPath) =
+                    strPickler.Write w "type" (ap.GetType().Name)
+                    intPickler.Write w $"dp0" ap.Depth
+                    int64Pickler.Write w $"uid0" 0 
+                    strPickler.Write w $"nm0" ap.Name
+                    addrPickler.Write w $"addr0" ap.Address
+
+                let rec writerBase (w : WriteState) (ap : ActorPath) (depth : int) =  
+                    //let ap = apo :> ActorPath
+                    if ap.Parent = null then
+                        writerSimple w (ap :?> RootActorPath)
+                    else
+                        strPickler.Write w "type" (ap.GetType().Name)
+                        intPickler.Write w $"dp{depth}" ap.Depth
+                        int64Pickler.Write w $"uid{depth}" ap.Uid 
+                        strPickler.Write w $"nm{depth}" ap.Name
+                        addrPickler.Write w $"addr{depth}" ap.Address
+                        if ap.Depth > 0 then
+                            writerBase w ap.Parent (depth + 1)
+        
+        
+                writerBase w apo 0
+
+            let reader (r : ReadState) =
+            
+
+                let rec readerBase (r : ReadState) (depth : int) =
+                    let typ = strPickler.Read r "type"
+                    printfn "typ: %s" typ
+                    //let ac2, ac3 =
+                    //    match typ with
+                    //    //| "ActorPath" -> apCtor2, apCtor3
+                    //    | "ChildActorPath" -> null, capCtor3
+                    //    | "RootActorPath" -> rapCtor2, null
+                    let dp   = intPickler.Read r $"dp{depth}"
+                    let uid  = int64Pickler.Read r $"uid{depth}" 
+                    let name = strPickler.Read r $"nm{depth}"
+                    let addr = addrPickler.Read r $"addr{depth}"
+                    let rtn = 
+                        if dp = 0 then
+                            //rapCtor2.Invoke([|box addr; box name|]) :?> RootActorPath :> ActorPath
+                            RootActorPath(addr, name) :> ActorPath
+                        else
+                            //capCtor3.Invoke([|
+                            //    box (readerBase r (depth + 1))
+                            //    box name
+                            //    box uid
+                            //|]) :?> ChildActorPath :> ActorPath
+                            ChildActorPath(readerBase r (depth + 1), name, uid):> ActorPath
+                    rtn
+                readerBase r 0  :?> 'T
+
+            Pickler.FromPrimitives(reader, writer)
+        pathPickler
+
+
+
+    
 
 
     let internal serializeToBinary (fsp:BinarySerializer) o = 
@@ -49,11 +130,35 @@ module Serialization =
             use stream = new System.IO.MemoryStream(bytes)
             fsp.Deserialize<'t> stream
     
+    let mutable cacheOpt : PicklerCache option = None
+
     // used for top level serialization
     type ExprSerializer(system) = 
         inherit Serializer(system)
-        let registry = new CustomPicklerRegistry()
-        let fsp = FsPickler.CreateBinarySerializer(picklerResolver = cache)
+        
+        let fsp = 
+            let cache =
+                match cacheOpt with
+                | None ->
+                    
+                    let p1 = iActorRefPickler<Akka.Actor.RepointableActorRef> system
+                    let p2 = iActorRefPickler<IActorRef>                      system
+                    let p3 = iActorRefPickler<LocalActorRef>                  system
+                    let p4 = iActorRefPickler<EmptyLocalActorRef>                  system
+                    let p5 = iActorRefPickler<RootGuardianActorRef>                  system
+                    let registry = new CustomPicklerRegistry()
+                    let _ = registry.RegisterFactory mkPickler
+                    let _ = registry.RegisterFactory p1
+                    let _ = registry.RegisterFactory p2
+                    let _ = registry.RegisterFactory p3
+                    let _ = registry.RegisterFactory p4
+                    let _ = registry.RegisterFactory p5
+                    let _ = registry.DeclareSerializable<Address>()
+                    let _ = registry.RegisterFactory (genPathPickler<ChildActorPath> ())
+                    let _ = registry.RegisterFactory (genPathPickler<RootActorPath> ())
+                    PicklerCache.FromCustomPicklerRegistry registry
+                | Some v -> v
+            FsPickler.CreateBinarySerializer(picklerResolver = cache)
         //do
         //    registry.DeclareSerializable<System.Collections.Immutable.ImmutableHashSet<string>>()
         override __.Identifier = 99
