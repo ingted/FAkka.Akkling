@@ -1,8 +1,8 @@
 
-
 #r "nuget: Akka.Serialization.Hyperion"
 #r "nuget: Akka.Persistence"
 #r "nuget: FAkka.Akkling"
+#r "nuget: FAkka.Akkling.Cluster.Sharding"
 #r "nuget: Akka.Streams"
 #r "nuget: FAkka.Akkling.Persistence"
 //#r @"G:\git\Akkling\src\Akkling\bin\Debug\netstandard2.0\Akkling.dll"
@@ -12,6 +12,7 @@
 open System
 open Akkling
 open Akkling.Persistence
+open Akkling.Cluster.Sharding
 open Akka
 open Akka.Actor
 open Akka.Streams
@@ -43,8 +44,26 @@ let mutable aa = 123
 aa <- 456
 aa
 
+open System.Reflection
+
+let fpa = typeof<FunPersistentActor<obj>>
+let p = fpa.GetField("persistentId", BindingFlags.Instance ||| BindingFlags.NonPublic) 
+
+
+let fpsa = typeof<FunPersistentShardingActor<obj>>
+let p2 = fpsa.GetField("persistentId", BindingFlags.Instance ||| BindingFlags.NonPublic) 
+
+
+
+
 let counter =
     spawn system "counter-1" <| propsPersist(fun (mailbox:Eventsourced<obj>) ->
+        printfn "mailbox type: %s" <| mailbox.GetType().FullName
+        let mb2 = box mailbox :?> TypedPersistentContext<_, _> :> ExtEventsourced<_>
+        let ab = mb2.Incarnation () :?> FunPersistentActor<obj>
+
+        ab
+
         let rec loop state = //recursive
             actor {
                 let! msg = mailbox.Receive()
@@ -83,7 +102,7 @@ let counter =
                         return Persist (box (Event ({ Delta = 10 }, me)))
                         printfn "print1 in ReturnBangBetweenReturn: %d" state
                         return! loop state
-                        //¸g¹êÅç¡A¥H¤U¤£³Q°õ¦æ
+                        //ç¶“å¯¦é©—ï¼Œä»¥ä¸‹ä¸è¢«åŸ·è¡Œ
                         printfn "print2 in ReturnBangBetweenReturn: %d" state
                         return Persist (box (Event ({ Delta = 10 }, me)))
                     | Dec -> return Persist (box (Event ({ Delta = -1 }, me)))
@@ -110,15 +129,15 @@ counter <! Command Inc2
 counter <! Command Inc3
 counter <! Command GetState
 counter <! Command Inc
-counter <! Command ReturnBangBetweenReturn // ¤£ BecomeIt ±¡ªp¤U·|Åıreturn!«á­±ªº return ÅÜ¦¨ cont ªº¤@³¡¤À
+counter <! Command ReturnBangBetweenReturn // ä¸ BecomeIt æƒ…æ³ä¸‹æœƒè®“return!å¾Œé¢çš„ return è®Šæˆ cont çš„ä¸€éƒ¨åˆ†
 
 system.Stop (counter.Underlying :?> Akka.Actor.IActorRef)
 
 (*
-    ´NÅÜ¦¨¦n¹³ return! (
+    å°±è®Šæˆå¥½åƒ return! (
                         xxxxx
                         return effect
-                      ) //xxxx¸ò return µ²¦X¬°¤@Åé
+                      ) //xxxxè·Ÿ return çµåˆç‚ºä¸€é«”
 *)
 
 counter <! Command Dec
@@ -175,7 +194,7 @@ let counter2 =
             }
         loop 0)
 
-//¹êÅç¤@¡Areturn! ³y¦¨¤¤Â_«á become ±µÄò
+//å¯¦é©—ä¸€ï¼Œreturn! é€ æˆä¸­æ–·å¾Œ become æ¥çºŒ
 counter2 <! Command2 ReturnBangBetweenReturn2
 counter2 <! BecomeIt2 (fun o ->
                         printfn "Only echo left: %O" o
@@ -187,7 +206,7 @@ system.Stop (counter2.Underlying :?> Akka.Actor.IActorRef)
 
 
 
-//¹êÅç¤G¡Areturn! ³y¦¨¤¤Â_«á ¨â¦¸ become ±µÄò
+//å¯¦é©—äºŒï¼Œreturn! é€ æˆä¸­æ–·å¾Œ å…©æ¬¡ become æ¥çºŒ
 let f o =
     printfn "Only echo left: %O" o
     Ignore :> Effect<_>
@@ -293,7 +312,7 @@ let counter3 =
                         return Persist (box (Event ({ Delta = 10 }, me)))
                         printfn "print1 in ReturnBangBetweenReturn: %d" state
                         return! loop state
-                        //¸g¹êÅç¡A¥H¤U¤£³Q°õ¦æ
+                        //ç¶“å¯¦é©—ï¼Œä»¥ä¸‹ä¸è¢«åŸ·è¡Œ
                         printfn "print2 in ReturnBangBetweenReturn: %d" state
                         return Persist (box (Event ({ Delta = 10 }, me)))
                     | Dec -> return Persist (box (Event ({ Delta = -1 }, me)))
@@ -320,7 +339,7 @@ counter3 <! Command Inc2
 counter3 <! Command Inc3
 counter3 <! Command GetState
 //counter3 <! Command Inc
-//counter3 <! Command ReturnBangBetweenReturn // ¤£ BecomeIt ±¡ªp¤U·|Åıreturn!«á­±ªº return ÅÜ¦¨ cont ªº¤@³¡¤À
+//counter3 <! Command ReturnBangBetweenReturn // ä¸ BecomeIt æƒ…æ³ä¸‹æœƒè®“return!å¾Œé¢çš„ return è®Šæˆ cont çš„ä¸€éƒ¨åˆ†
 
 let echo : IActorRef<obj> = 
     spawn system2 "echo" <| props (actorOf (fun m -> 
@@ -370,7 +389,7 @@ let system2 = (getDefaultActorSystemLocal None [] 1 true None).asys
 
 
 
-//¥H¤UµL·N¸q async demo
+//ä»¥ä¸‹ç„¡æ„ç¾© async demo
 
 
 async {

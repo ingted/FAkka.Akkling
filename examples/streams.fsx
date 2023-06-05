@@ -1,3 +1,5 @@
+//https://stackoverflow.com/questions/37911174/via-viamat-to-tomat-in-akka-stream
+
 #r "nuget: Akka.Serialization.Hyperion"
 #r "nuget: Akka.Streams"
 #r "nuget: Akkling"
@@ -19,12 +21,69 @@ let text = """
        specimen book."""
 
 // 1. Basic stream transformation
+let src = 
+    Source.ofArray (text.Split())
+    |> Source.map (fun x -> x.ToUpper())
+    |> Source.filter (String.IsNullOrWhiteSpace >> not)
+let async1 = 
+    src
+    |> Source.runForEach mat (printfn "1 %s")
+let async2 = 
+    src
+    |> Source.runForEach mat (printfn "2 %s")
 
-Source.ofArray (text.Split())
-|> Source.map (fun x -> x.ToUpper())
-|> Source.filter (String.IsNullOrWhiteSpace >> not)
-|> Source.runForEach mat (printfn "%s")
+async {
+    do! async1
+    do! async2
+}
 |> Async.RunSynchronously
+
+src
+|> Source.runForEach mat (fun s ->
+    printfn "1 %s" s
+    Async.Sleep 1000 |> Async.RunSynchronously
+    )
+
+src
+|> Source.runForEach mat (fun s ->
+    printfn "2 %s" s
+    Async.Sleep 1000 |> Async.RunSynchronously
+    )
+
+
+let tm =  src |> Source.toMat (Sink.forEach(fun s -> printfn "1 Received: %s" s)) Keep.left
+let tm2 = src |> Source.toMat (Sink.forEach(fun s -> printfn "2 Received: %s" s)) Keep.left
+tm |> Graph.run mat
+tm2 |> Graph.run mat
+
+
+let sink111 = Sink.forEach(fun s -> printfn "1 Received: %d" s).MapMaterializedValue(fun a -> 
+                                                                                        a |> Async.RunSynchronously |> ignore
+                                                                                        Akka.NotUsed.Instance
+                                                                                        ) :> IGraph<SinkShape<_>, _>
+let sink222 = Sink.forEach(fun s -> printfn "2 Received: %d" s).MapMaterializedValue(fun a -> 
+                                                                                        a |> Async.RunSynchronously |> ignore
+                                                                                        Akka.NotUsed.Instance
+                                                                                        ) :> IGraph<SinkShape<_>, _>
+let ftt = Flow.Create<int>().AlsoTo(sink111).To(sink222)
+
+let g111222 = (Source.ofArray [|87;87;87|]) |> Source.toSink ftt
+
+g111222 |> Graph.run mat
+
+
+
+let sink111_2 = Sink.forEach(fun s -> printfn "2 Received: %d" s) |> Sink.mapMatValue (fun done_ -> Akka.NotUsed.Instance)
+
+
+
+
+
+
+
+
+
+
 
 // 2. Actor interop
 
@@ -39,20 +98,41 @@ let behavior targetRef (m:Actor<_>) =
 let spawnActor targetRef =
     spawnAnonymous system <| props (behavior targetRef)
 
-let s = Source.actorRef OverflowStrategy.DropNew 1000
-        |> Source.mapMaterializedValue(spawnActor)
-        |> Source.toMat(Sink.forEach(fun s -> printfn "Received: %s" s)) Keep.left
-        |> Graph.run mat
+let s = 
+    let arf =Source.actorRef OverflowStrategy.DropNew 1000    
+    let mapv = arf |> Source.mapMaterializedValue(spawnActor)
+    let sToMap = mapv |> Source.toMat(Sink.forEach(fun s -> printfn "Received: %s" s)) Keep.both
+    sToMap |> Graph.run mat
 
-s <! "Boo"
+fst s <! "Boo"
+
+async {
+    let! done_ = snd s
+    printfn "----"
+} |> Async.RunSynchronously
+
+
+
+let s2 = 
+    let arf =Source.actorRef OverflowStrategy.DropNew 1000
+    let sToMap = arf |> Source.toMat(Sink.forEach(fun s -> printfn "Received: %s" s)) Keep.left
+    sToMap |> Graph.run mat
+
+s2 <! "Boo"
 
 // 3. Dynamic streams
 
 let sink = Sink.forEach (printfn "%s")
 let consumer = 
-    Source.mergeHub 10 
+    let srcMgHub = Source.mergeHub 10 
+    srcMgHub
     |> Source.toMat sink Keep.left
     |> Graph.run mat
+
+
+//Source.toMat sink Keep.left (Source.mergeHub 10)
+
+
 
 Source.singleton "hello" |> Source.runWith mat consumer
 Source.singleton "world" |> Source.runWith mat consumer

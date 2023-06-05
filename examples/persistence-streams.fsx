@@ -86,12 +86,15 @@ let persistActor (queue: ISourceQueue<CounterChanged>) =
 let persistentQueue<'T> system pid (overflowStrategy: OverflowStrategy) (maxBuffer: int) =
     Source.queue overflowStrategy maxBuffer
     |> Source.mapMaterializedValue(persistActor >> spawn system pid)
+    //|> Source.map(persistActor >> spawn system pid)
 
 let source = persistentQueue<CounterChanged> system "pa1" OverflowStrategy.DropNew 1000
 
 let actorRef, arr = async {
+//let actorRef = async {
                         return source
                                 |> Source.toMat (Sink.forEach(printfn "Piu: %A")) Keep.both
+                                //|> Source.toSink (Sink.forEach (printfn "Piu: %A"))
                                 |> Graph.run mat
                     }
                     |> Async.RunSynchronously

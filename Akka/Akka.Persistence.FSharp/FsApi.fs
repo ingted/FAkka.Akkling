@@ -156,9 +156,9 @@ type FunPersistentActor<'Command, 'Event, 'State>(aggregate: Aggregate<'Command,
         match msg with
         | :? 'Command as cmd -> aggregate.exec mailbox state cmd
         | _ -> 
-            let serializer = UntypedActor.Context.System.Serialization.FindSerializerForType typeof<'Command>
             match msg with
             | :? (byte[]) as bytes -> 
+                let serializer = UntypedActor.Context.System.Serialization.FindSerializerForType typeof<'Command>
                 let cmd = serializer.FromBinary(bytes, typeof<'Command>) :?> 'Command
                 aggregate.exec mailbox state cmd
             | _ -> x.Unhandled msg
@@ -166,9 +166,9 @@ type FunPersistentActor<'Command, 'Event, 'State>(aggregate: Aggregate<'Command,
         match msg with
         | :? 'Event as e -> state <- aggregate.apply mailbox state e
         | _ -> 
-            let serializer = UntypedActor.Context.System.Serialization.FindSerializerForType typeof<'Event>
             match msg with
             | :? (byte[]) as bytes -> 
+                let serializer = UntypedActor.Context.System.Serialization.FindSerializerForType typeof<'Event>
                 let e = serializer.FromBinary(bytes, typeof<'Event>) :?> 'Event
                 state <- aggregate.apply mailbox state e
             | _ -> x.Unhandled msg

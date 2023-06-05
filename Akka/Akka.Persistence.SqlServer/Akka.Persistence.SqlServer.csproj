@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyTitle>Akka.Persistence.SqlServer</AssemblyTitle>
+        <Description>Akka.Persistence support for SQL Server.
+        </Description>
+        <TargetFramework>net7.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<EnablePackageValidation>true</EnablePackageValidation>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<OutputPath>./bin</OutputPath>
+		<IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+		<IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+		<IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+    <ItemGroup>
+      <None Remove="LICENSE.txt" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="LICENSE.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="sql-server.conf" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Akka.Persistence.Sql.Common" Version="1.5.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+    </ItemGroup>
+
+
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Version>1.5.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+	<ItemGroup>
+
+		<None Include="LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(IsWindows)'=='true' AND '$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+	</Target>
+
+	<Target Name="PostPackNugetDeployLinux" AfterTargets="Pack" Condition="'$(IsLinux)'=='true' AND '$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell ./PostBuildEvent.Linux.ps1 FAkka.$(AssemblyName).Linux" />
+	</Target>
+	
+	<PropertyGroup Condition="'$(IsWindows)'=='true'">
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(IsLinux)'=='true'">
+		<PackageId>FAkka.$(AssemblyName).Linux</PackageId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(IsWindows)'=='true'">
+		<DefineConstants>Windows</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(IsOSX)'=='true'">
+		<DefineConstants>OSX</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(IsLinux)'=='true'">
+		<DefineConstants>Linux</DefineConstants>
+	</PropertyGroup>
+</Project>

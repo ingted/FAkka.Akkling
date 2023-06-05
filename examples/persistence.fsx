@@ -33,6 +33,7 @@ let counter =
                     match cmd with
                     | GetState ->
                         mailbox.Sender() <! state
+                        printfn "%A" state
                         return! loop state
                     | Inc -> return Persist (Event { Delta = 1 })
                     | Dec -> return Persist (Event { Delta = -1 })
@@ -40,14 +41,15 @@ let counter =
         loop 0)
 
 
-   //1     C2 C1 ¤H 
-   //2     C2 E1 ¤H C1 
-   //3        C2 ¤H E1 C1
-//!true operator ¹Bºâ¤l operand ¹Bºâ¤¸
+   //1     C2 C1 äºº 
+   //2     C2 E1 äºº C1 
+   //3        C2 äºº E1 C1
+//!true operator é‹ç®—å­ operand é‹ç®—å…ƒ
 let a = Unchecked.defaultof<IActorRef<int>>
 counter <! Command Inc
 counter <! Command Inc
 counter <! Command Dec
+counter <! Command GetState
 
 counter <! Event { Delta = 1 }
 
@@ -58,4 +60,4 @@ type AT =
 | O of int
 
 
-let plus1 a b = a + 1 //¨ç¼Æ¬M®g mapping
+let plus1 a b = a + 1 //å‡½æ•¸æ˜ å°„ mapping
