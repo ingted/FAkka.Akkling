@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Library used for working with Akka.NET using F# in type safe manner with functional principles in mind</Description>
+    <PackageTags>akka.net fsharp akkling</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Atomics.fs" />
+    <Compile Include="ActorRefs.fs" />
+    <Compile Include="Actors.fs" />
+    <Compile Include="MessagePatterns.fs" />
+    <Compile Include="ActorBuilder.fs" />
+    <Compile Include="FaultHandling.fs" />
+    <Compile Include="Props.fs" />
+    <Compile Include="Configuration.fs" />
+    <Compile Include="Spawning.fs" />
+    <Compile Include="Behaviors.fs" />
+    <Compile Include="Schedulers.fs" />
+    <Compile Include="Logging.fs" />
+    <Compile Include="Utils.fs" />
+    <Compile Include="Extensions.fs" />
+    <Compile Include="IO.fs" />
+  </ItemGroup>
+	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Akka" Version="1.5.28" />
+    <PackageReference Include="Akka.Serialization.Hyperion" Version="1.5.28" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+  </ItemGroup>
+</Project>

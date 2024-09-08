@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyTitle>Akka.Persistence.SqlServer</AssemblyTitle>
+        <Description>Akka.Persistence support for SQL Server.
+        </Description>
+        <TargetFramework>net9.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="icon.png" />
+    </ItemGroup>
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+		<Version>1.5.28</Version>
+	</PropertyGroup>
+    <ItemGroup>
+        <Content Include="icon.png" />
+        <EmbeddedResource Include="sql-server.conf" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Akka.Persistence.Sql.Common" Version="1.5.28" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.0-preview1.24240.8" />
+    </ItemGroup>
+</Project>

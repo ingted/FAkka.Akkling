@@ -1,0 +1,1 @@
+dotnet nuget push ./src/%1/bin/Release/%1.%2.nupkg --source https://api.nuget.org/v3/index.json --api-key %3

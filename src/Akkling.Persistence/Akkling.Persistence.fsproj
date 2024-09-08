@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>F# wrapper library for Akka.NET with persistence support</Description>
+    <PackageTags>akka.net fsharp akkling persistence eventsourcing</PackageTags>
+  </PropertyGroup>
+	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PersistentActor.fs" />
+    <Compile Include="AtLeastOnceDelivery.fs" />
+    <Compile Include="Patterns.fs" />
+    <Compile Include="Spawning.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Akkling.Streams\Akkling.Streams.fsproj" />
+    <ProjectReference Include="..\Akkling\Akkling.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Akka.Persistence" Version="1.5.28" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+  </ItemGroup>
+</Project>

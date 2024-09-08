@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>F# wrapper library for Akka.NET cluster sharding module.</Description>
+    <PackageTags>akka.net fsharp akkling cluster sharding</PackageTags>
+  </PropertyGroup>
+	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ClusterExtensions.fs" />
+    <Compile Include="ClusterSingleton.fs" />
+    <Compile Include="DistributedPubSub.fs" />
+    <Compile Include="ClusterClient.fs" />
+    <Compile Include="EntityRef.fs" />
+    <Compile Include="ClusterSharding.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Akkling.DistributedData\Akkling.DistributedData.fsproj" />
+    <ProjectReference Include="..\Akkling.Persistence\Akkling.Persistence.fsproj" />
+    <ProjectReference Include="..\Akkling\Akkling.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Akka.Cluster.Sharding" Version="1.5.28" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+  </ItemGroup>
+</Project>

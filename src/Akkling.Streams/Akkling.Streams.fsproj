@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>F# wrapper library for Akka.NET with reactive streams support</Description>
+    <PackageTags>akka.net fsharp akkling reactive streams</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Framing.fs" />
+    <Compile Include="Prolog.fs" />
+    <Compile Include="Stages.fs" />
+    <Compile Include="Sink.fs" />
+    <Compile Include="SubFlow.fs" />
+    <Compile Include="BidiFlow.fs" />
+    <Compile Include="Graph.fs" />
+    <Compile Include="Flow.fs" />
+    <Compile Include="KillSwitch.fs" />
+    <Compile Include="Source.fs" />
+    <Compile Include="WithContext.fs" />
+    <Compile Include="Tcp.fs" />
+  </ItemGroup>
+	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
+	</PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Akkling\Akkling.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Akka.Streams" Version="1.5.28" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+  </ItemGroup>
+</Project>
