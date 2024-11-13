@@ -10,7 +10,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <RepositoryUrl>https://github.com/Horusiath/Akkling</RepositoryUrl>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<Version>1.0.528</Version>
+		<Version>1.0.530.100</Version>
     </PropertyGroup>
     <ItemGroup>
         <None Include="../../README.md" Pack="true" PackagePath="\"/>

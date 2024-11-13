@@ -56,7 +56,7 @@
     <Compile Include="Akka.fs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Akka" Version="1.5.28" />
-    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+    <PackageReference Include="Akka" Version="1.5.30" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100" />
   </ItemGroup>
 </Project>

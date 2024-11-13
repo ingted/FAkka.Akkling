@@ -12,7 +12,7 @@
     <ProjectReference Include="..\Akkling\Akkling.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Akka.Streams.TestKit" Version="1.5.28-beta1" />
-    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24406.3" />
+    <PackageReference Include="Akka.Streams.TestKit" Version="1.5.30" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100-beta.24466.6" />
   </ItemGroup>
 </Project>
