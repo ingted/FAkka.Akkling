@@ -3,17 +3,11 @@
   <PropertyGroup>
     <Description>Akka.NET HOCON computation expressions</Description>
     <PackageTags>akka.net fsharp akkling hocon</PackageTags>
-	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Authors />
-	  <Description />
-	  <OutputPath>./bin</OutputPath>
   </PropertyGroup>
 	<PropertyGroup>
 		<PackageId>FAkka.$(AssemblyName)</PackageId>
 	</PropertyGroup>
   <ItemGroup>
-    <None Include="PostBuildEvent.ps1" />
     <Compile Include="Types.fs" />
     <Compile Include="Common.fs" />
     <Compile Include="Shared.fs" />
@@ -61,12 +55,8 @@
     <Compile Include="Test.fs" />
     <Compile Include="Akka.fs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <PackageReference Include="Akka" Version="1.5.57" />
-    <PackageReference Update="FSharp.Core" Version="10.0.101" />
+    <PackageReference Include="Akka" Version="1.5.30" />
+    <PackageReference Update="FSharp.Core" Version="9.0.100" />
   </ItemGroup>
-	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
-	</Target>
 </Project>

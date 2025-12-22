@@ -2,7 +2,7 @@
     <!--<Import Project="..\..\common.props" />-->
 
     <PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFrameworks>net9.0;net10.0</TargetFrameworks>
         <AssemblyTitle>Akka.Persistence.FSharp</AssemblyTitle>
         <Description>F# API for persistence actors in Akka.NET</Description>
         
@@ -39,7 +39,7 @@
 
 
 	<ItemGroup Condition="'$(IsWindows)'=='true'">
-		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.30.2" />
+		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.57" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(IsLinux)'=='true'">
@@ -47,7 +47,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Akka.Persistence" Version="1.5.30" />
+		<PackageReference Include="Akka.Persistence" Version="1.5.57" />
 	</ItemGroup>
 
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -57,7 +57,7 @@
 
 	<PropertyGroup>
 		<!--<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>-->
-		<Version>1.5.30.2</Version>
+		<Version>1.5.57</Version>
 	</PropertyGroup>
 
 
