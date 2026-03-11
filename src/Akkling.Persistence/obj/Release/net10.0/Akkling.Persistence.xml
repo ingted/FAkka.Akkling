@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Akkling.Persistence</name></assembly>
+<members>
+<member name="T:Akkling.Persistence.PersistentEffect`1.DeleteMessages">
+<summary>
+ Request effect to delete all events up to a specified sequence number.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.DeleteSnapshots">
+<summary>
+ Request effect to delete all snapshots matching specified criteria.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.DeleteSnapshot">
+<summary>
+ Request effect to delete snapshot identified by a specified sequence number.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.SaveSnapshot">
+<summary>
+ Triggers a snapshot save over specified state. This action always happens asynchronously:
+ actor will not await for its completion and it&apos;s free to handle other incoming messages
+ while snapshot persistence is in progress.
+
+ Snapshot persistence will cause either `SaveSnapshotSuccess` or `SaveSnapshotFailure`
+ events to trigger into a current actor&apos;s message handler.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.LoadSnapshot">
+<summary>
+ This effect will trigger current actor to load snapshot. It can be used ie. in response
+ to a `LifecycleEvent PreStart`. If a matching snapshot existed it can be retrieved back
+ using `SnapshotOffer(state)` active pattern in current actor&apos;s message handler.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.PersistAllAsync">
+<summary>
+ Persist multiple events inside of event journal. This effect will result in calling
+ current actor&apos;s handler function upon each persistent event, but unlike `PersistAll` it will
+ not await for persistence process - if other request will arrive while event persist is
+ in progress, they will may be handled before persisted event handler.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.PersistAsync">
+<summary>
+ Persist an event inside of event journal. This effect will result in calling
+ current actor&apos;s handler function upon persistent event, but unlike `Persist` it will
+ not await for persistence process - if other request will arrive while event persist is
+ in progress, they will may be handled before persisted event handler.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.PersistAll">
+<summary>
+ Persist multiple events inside of event journal. This effect will result in calling
+ current actor&apos;s handler function upon each persistent event before handling the next
+ incoming request.
+</summary>
+</member>
+<member name="T:Akkling.Persistence.PersistentEffect`1.Persist">
+<summary>
+ Persist an event inside of event journal. This effect will result in calling
+ current actor&apos;s handler function upon persistent event before handling the next
+ incoming request.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.PersistentContext`1.PersistEvent(System.Collections.Generic.IEnumerable{`0},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Persists sequence of events in the event journal. Use second argument to define
+ function which will update state depending on events.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.PersistentContext`1.DeferEvent(System.Collections.Generic.IEnumerable{`0},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Defers a second argument (update state callback) to be called after persisting target
+ event will be confirmed.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.PersistentContext`1.AsyncPersistEvent(System.Collections.Generic.IEnumerable{`0},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Asynchronously persists sequence of events in the event journal. Use second argument
+ to define function which will update state depending on events.
+ </summary>
+</member>
+<member name="P:Akkling.Persistence.Eventsourced`1.SnapshotStore">
+ <summary>
+ Returns currently attached snapshot store actor reference.
+ </summary>
+</member>
+<member name="P:Akkling.Persistence.Eventsourced`1.Pid">
+ <summary>
+ Persistent actor's identifier that doesn't change across different actor incarnations.
+ </summary>
+</member>
+<member name="P:Akkling.Persistence.Eventsourced`1.Journal">
+ <summary>
+ Returns currently attached journal actor reference.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.Eventsourced`1.LastSequenceNr">
+ <summary>
+ Returns last sequence number attached to latest persisted event.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.Eventsourced`1.IsRecovering">
+ <summary>
+ Returns value determining if current persistent actor is actually recovering.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.Eventsourced`1.HasPersisted">
+ <summary>
+ Flag which informs if current actor is actually during execution of persisting handler.
+ </summary>
+</member>
+<member name="M:Akkling.Persistence.Eventsourced`1.HasDeferred">
+ <summary>
+ Flag which informs if current actor is actually during execution of deferred handler.
+ </summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.DeliverySnapshot(Akka.Persistence.AtLeastOnceDeliverySnapshot)">
+<summary>
+ Full delivery state of the at-least-once delivery, including unconfirmed messages.
+ It can be saved as part of the persistence snapshot.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.WarnAfterNumberOfUnconfirmedAttempts">
+<summary>
+ After this number of delivery attempts a Akka.Persistence.UnconfirmedWarning message will be sent to self.
+ The count is reset after restart. The default value can be configure with the
+ &apos;akka.persistence.at-least-once-delivery.warn-after-number-of-unconfirmed-attempts&apos; configuration key.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.UnconfirmedCount">
+<summary>
+ Number of messages, that have not been confirmed yet.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.RedeliveryBurstLimit">
+<summary>
+ Maximum number of unconfirmed messages that will be sent at each redelivery burst
+ (burst frequency is half of the redelivery interval). If there&apos;s a lot of unconfirmed messages
+ (e.g. if the destination is not available for a long time), this helps prevent an overwhelming amount of messages to be sent at once.
+ The default value can be configure with the &apos;akka.persistence.at-least-once-delivery.redelivery-burst-limit&apos; configuration key.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.RedeliverInterval">
+<summary>
+ Interval between redelivery attempts.
+ The default value can be configure with the &apos;akka.persistence.at-least-once-delivery.redeliver-interval&apos; configuration key.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.Receive">
+<summary>
+ Partial behavior responsible for handling the at-least-once-delivery semantics messages.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.MaxUnconfirmedMessages">
+<summary>
+ Maximum number of unconfirmed messages, that this actor is allowed to hold in the memory.
+ If this number is exceeded, Delivery will not accept more messages and it will return false.
+ The default value can be configure with the &apos;akka.persistence.at-least-once-delivery.max-unconfirmed-messages&apos; configuration key.
+</summary>
+</member>
+<member name="P:Akkling.Persistence.AtLeastOnceDeliverySemantic.DeliverySnapshot">
+<summary>
+ Full delivery state of the at-least-once delivery, including unconfirmed messages.
+ It can be saved as part of the persistence snapshot.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.AtLeastOnceDeliverySemantic.Confirm(System.Int64)">
+<summary>
+ Call this method when a message has been confirmed by the destination, or to abort re-sending.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.AtLeastOnceDelivery.createDefault``2(``0)">
+<summary>
+ Creates an at-least-once delivery semantics object with default settings.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.AtLeastOnceDelivery.create``2(Akka.Persistence.PersistenceSettings.AtLeastOnceDeliverySettings,``0)">
+<summary>
+ Creates an at-least-once delivery semantics object, that can be embedded into actor&apos;s behavior.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.AtLeastOnceDelivery.parseConfig(Akka.Configuration.Config)">
+<summary>
+ Creates an at-least-once delivery settings from provided configuration.
+</summary>
+</member>
+<member name="M:Akkling.Persistence.Props.propsPersist``1(Microsoft.FSharp.Core.FSharpFunc{Akkling.Persistence.Eventsourced{``0},Akkling.Actors.Effect{``0}})">
+ <summary>
+ Creates a props describing a way to incarnate persistent actor with behavior described by <paramref name="receive"/> function.
+ </summary>
+</member>
+</members>
+</doc>

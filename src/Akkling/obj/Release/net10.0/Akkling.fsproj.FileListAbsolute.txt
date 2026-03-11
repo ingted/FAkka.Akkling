@@ -1,0 +1,14 @@
+/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.deps.json
+/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.fsproj.AssemblyReference.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.AssemblyInfoInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.AssemblyInfo.fs
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.fsproj.CoreCompileInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.sourcelink.json
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/refint/Akkling.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/Akkling.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling/obj/Release/net10.0/ref/Akkling.dll

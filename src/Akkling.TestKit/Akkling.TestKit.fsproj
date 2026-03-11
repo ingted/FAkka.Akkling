@@ -1,13 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Description>F# wrapper library for Akka.NET TestKit library using FsCheck and xUnit.</Description>
+    <Description>F# wrapper library for Akka.NET TestKit library. Optimized for FAkka.</Description>
     <PackageTags>akka.net fsharp akkling testing fscheck</PackageTags>
-	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Authors />
-	  <Description />
-	  <OutputPath>./bin</OutputPath>
+          <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+          <PackageReadmeFile>README.md</PackageReadmeFile>
+          <Authors />
+          <Description />
   </PropertyGroup>
   <ItemGroup>
     <None Include="PostBuildEvent.ps1" />
@@ -15,16 +14,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Akkling\Akkling.fsproj" />
+    <PackageReference Include="FAkka.Akkling" Version="1.562.10.103-dgx.1" />
+    <PackageReference Include="Akka.TestKit.Xunit2" Version="1.5.62" />
+    <PackageReference Update="FSharp.Core" Version="10.0.103" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Akka.TestKit.Xunit2" Version="1.5.57" />
-    <PackageReference Update="FSharp.Core" Version="10.0.101" />
-  </ItemGroup>
-	<PropertyGroup>
-		<PackageId>FAkka.$(AssemblyName)</PackageId>
-	</PropertyGroup>
-	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
-	</Target>
+        <PropertyGroup>
+                <PackageId>FAkka.$(AssemblyName)</PackageId>
+        </PropertyGroup>
+  <Target Name="PostPackNugetDeploy" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="powershell ./PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+  </Target>
 </Project>

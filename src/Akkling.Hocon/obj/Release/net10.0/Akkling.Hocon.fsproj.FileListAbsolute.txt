@@ -1,0 +1,14 @@
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/bin/Release/net10.0/Akkling.Hocon.deps.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/bin/Release/net10.0/Akkling.Hocon.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/bin/Release/net10.0/Akkling.Hocon.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/bin/Release/net10.0/Akkling.Hocon.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.fsproj.AssemblyReference.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.AssemblyInfoInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.AssemblyInfo.fs
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.fsproj.CoreCompileInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.sourcelink.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/refint/Akkling.Hocon.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/Akkling.Hocon.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Hocon/obj/Release/net10.0/ref/Akkling.Hocon.dll

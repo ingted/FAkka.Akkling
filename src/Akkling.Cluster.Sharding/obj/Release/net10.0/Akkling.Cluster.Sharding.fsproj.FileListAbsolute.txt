@@ -1,0 +1,14 @@
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/bin/Release/net10.0/Akkling.Cluster.Sharding.deps.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/bin/Release/net10.0/Akkling.Cluster.Sharding.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/bin/Release/net10.0/Akkling.Cluster.Sharding.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/bin/Release/net10.0/Akkling.Cluster.Sharding.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.fsproj.AssemblyReference.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.AssemblyInfoInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.AssemblyInfo.fs
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.fsproj.CoreCompileInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.sourcelink.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/refint/Akkling.Cluster.Sharding.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/Akkling.Cluster.Sharding.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Cluster.Sharding/obj/Release/net10.0/ref/Akkling.Cluster.Sharding.dll

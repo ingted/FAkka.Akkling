@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/root/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/root/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/root/.nuget/packages/" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/root/.nuget/packages/fsharp.core/10.0.103</PkgFSharp_Core>
+    <PkgAkka_Analyzers Condition=" '$(PkgAkka_Analyzers)' == '' ">/root/.nuget/packages/akka.analyzers/0.3.3</PkgAkka_Analyzers>
+    <PkgFAkka_Akkling Condition=" '$(PkgFAkka_Akkling)' == '' ">/root/.nuget/packages/fakka.akkling/1.562.10.103-dgx.1</PkgFAkka_Akkling>
+    <PkgFAkka_Akkling_Persistence Condition=" '$(PkgFAkka_Akkling_Persistence)' == '' ">/root/.nuget/packages/fakka.akkling.persistence/1.562.10.103-dgx.1</PkgFAkka_Akkling_Persistence>
+    <PkgFAkka_Akkling_DistributedData Condition=" '$(PkgFAkka_Akkling_DistributedData)' == '' ">/root/.nuget/packages/fakka.akkling.distributeddata/1.562.10.103-dgx.1</PkgFAkka_Akkling_DistributedData>
+    <PkgAkka_Cluster_Sharding Condition=" '$(PkgAkka_Cluster_Sharding)' == '' ">/root/.nuget/packages/akka.cluster.sharding/1.5.62</PkgAkka_Cluster_Sharding>
+  </PropertyGroup>
+</Project>

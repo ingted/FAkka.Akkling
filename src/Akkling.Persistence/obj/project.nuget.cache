@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "UHUAeSUFbu4=",
+  "success": true,
+  "projectFilePath": "/workspace/home/work/FAkka.Akkling/src/Akkling.Persistence/Akkling.Persistence.fsproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/akka/1.5.62/akka.1.5.62.nupkg.sha512",
+    "/root/.nuget/packages/akka.analyzers/0.3.3/akka.analyzers.0.3.3.nupkg.sha512",
+    "/root/.nuget/packages/akka.persistence/1.5.62/akka.persistence.1.5.62.nupkg.sha512",
+    "/root/.nuget/packages/akka.serialization.hyperion/1.5.62/akka.serialization.hyperion.1.5.62.nupkg.sha512",
+    "/root/.nuget/packages/akka.streams/1.5.62/akka.streams.1.5.62.nupkg.sha512",
+    "/root/.nuget/packages/fakka.akkling/1.562.10.103-dgx.1/fakka.akkling.1.562.10.103-dgx.1.nupkg.sha512",
+    "/root/.nuget/packages/fakka.akkling.streams/1.562.10.103-dgx.1/fakka.akkling.streams.1.562.10.103-dgx.1.nupkg.sha512",
+    "/root/.nuget/packages/fsharp.core/10.0.103/fsharp.core.10.0.103.nupkg.sha512",
+    "/root/.nuget/packages/google.protobuf/3.26.1/google.protobuf.3.26.1.nupkg.sha512",
+    "/root/.nuget/packages/hyperion/0.12.2/hyperion.0.12.2.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.extensions.objectpool/6.0.36/microsoft.extensions.objectpool.6.0.36.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/root/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/root/.nuget/packages/reactive.streams/1.0.4/reactive.streams.1.0.4.nupkg.sha512",
+    "/root/.nuget/packages/system.configuration.configurationmanager/6.0.1/system.configuration.configurationmanager.6.0.1.nupkg.sha512",
+    "/root/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",
+    "/root/.nuget/packages/system.security.cryptography.protecteddata/6.0.0/system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "/root/.nuget/packages/system.security.permissions/6.0.0/system.security.permissions.6.0.0.nupkg.sha512",
+    "/root/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

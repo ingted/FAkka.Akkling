@@ -1,0 +1,14 @@
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/bin/Release/net10.0/Akkling.Streams.TestKit.deps.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/bin/Release/net10.0/Akkling.Streams.TestKit.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/bin/Release/net10.0/Akkling.Streams.TestKit.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/bin/Release/net10.0/Akkling.Streams.TestKit.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.fsproj.AssemblyReference.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.AssemblyInfoInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.AssemblyInfo.fs
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.fsproj.CoreCompileInputs.cache
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.sourcelink.json
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/refint/Akkling.Streams.TestKit.dll
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.xml
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/Akkling.Streams.TestKit.pdb
+/workspace/home/work/FAkka.Akkling/src/Akkling.Streams.TestKit/obj/Release/net10.0/ref/Akkling.Streams.TestKit.dll

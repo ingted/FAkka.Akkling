@@ -1,13 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Description>F# wrapper library for Akka.NET with geo-replicated distributed data support (CRDT)</Description>
+    <Description>F# wrapper library for Akka.NET with geo-replicated distributed data support (CRDT). Optimized for FAkka.</Description>
     <PackageTags>akka.net fsharp akkling crdt replication geo</PackageTags>
-	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Authors />
-	  <Description />
-	  <OutputPath>./bin</OutputPath>
+          <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+          <PackageReadmeFile>README.md</PackageReadmeFile>
+          <Authors />
+          <Description />
   </PropertyGroup>
   <ItemGroup>
     <None Include="PostBuildEvent.ps1" />
@@ -15,18 +14,19 @@
     <Compile Include="Consistency.fs" />
     <Compile Include="DData.fs" />
   </ItemGroup>
-	<PropertyGroup>
-		<PackageId>FAkka.$(AssemblyName)</PackageId>
-	</PropertyGroup>
-	<ItemGroup />
+        <PropertyGroup>
+                <PackageId>FAkka.$(AssemblyName)</PackageId>
+        </PropertyGroup>
+        <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Akkling\Akkling.fsproj" />
+    <!-- 引用剛發布的 FAkka.Akkling -->
+    <PackageReference Include="FAkka.Akkling" Version="1.562.10.103-dgx.1" />
+    <PackageReference Include="Akka.DistributedData" Version="1.5.62" />
+    <PackageReference Update="FSharp.Core" Version="10.0.103" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Akka.DistributedData" Version="1.5.57" />
-    <PackageReference Update="FSharp.Core" Version="10.0.101" />
-  </ItemGroup>
-	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
-	</Target>
+
+  <!-- 統一呼叫跨平台腳本 -->
+  <Target Name="PostPackNugetDeploy" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="powershell ./PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+  </Target>
 </Project>

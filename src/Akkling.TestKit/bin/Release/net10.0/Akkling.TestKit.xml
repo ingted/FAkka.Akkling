@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Akkling.TestKit</name></assembly>
+<members>
+<member name="M:Akkling.TestKit.testDefault``1(Microsoft.FSharp.Core.FSharpFunc{Akka.TestKit.Xunit2.TestKit,``0})">
+ <summary>
+ Runs a test case function using default configuration.
+ </summary>
+</member>
+<member name="M:Akkling.TestKit.test(Akka.Configuration.Config,Microsoft.FSharp.Core.FSharpFunc{Akka.TestKit.Xunit2.TestKit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Runs a test case function in context of TestKit aware actor system.
+ </summary>
+ <param name="config">Configuration used for actor system initialization.</param>
+ <param name="fn">Test case function</param>
+</member>
+</members>
+</doc>

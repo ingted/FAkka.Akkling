@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akkling.Persistence">
+    <resource name="FSharpSignatureData.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akkling.Persistence" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akkling.Persistence" action="remove"></resource>
+  </assembly>
+</linker>
