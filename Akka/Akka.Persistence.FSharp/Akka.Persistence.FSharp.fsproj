@@ -2,7 +2,7 @@
     <!--<Import Project="..\..\common.props" />-->
 
     <PropertyGroup>
-		<TargetFrameworks>net9.0;net10.0</TargetFrameworks>
+		<TargetFramework>net10.0</TargetFramework>
         <AssemblyTitle>Akka.Persistence.FSharp</AssemblyTitle>
         <Description>F# API for persistence actors in Akka.NET</Description>
         
@@ -10,7 +10,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
 		<EnablePackageValidation>true</EnablePackageValidation>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<OutputPath>./bin</OutputPath>
 		<IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
 		<IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
@@ -38,17 +38,7 @@
     </ItemGroup>-->
 
 
-	<ItemGroup Condition="'$(IsWindows)'=='true'">
-		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.57" />
-	</ItemGroup>
 
-	<ItemGroup Condition="'$(IsLinux)'=='true'">
-		<PackageReference Include="FAkka.Akka.FSharp.Linux" Version="1.0.*" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Akka.Persistence" Version="1.5.57" />
-	</ItemGroup>
 
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
@@ -56,47 +46,26 @@
 
 
 	<PropertyGroup>
+		<PackageId>FAkka.$(AssemblyName)</PackageId>
 		<!--<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>-->
-		<Version>1.5.57</Version>
+		<Version>1.5.62</Version>
 	</PropertyGroup>
-
-
 
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="/" />
+		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.62" />
+		<PackageReference Include="Akka.Persistence" Version="1.5.62" />
+		<PackageReference Include="FSharp.Core" Version="10.0.105" />
+		<PackageReference Include="FSharp.Quotations.Evaluator" Version="2.1.0" />
 	</ItemGroup>
+
 	<ItemGroup>
-
-		<!--<None Include="LICENSE.txt" Pack="true" PackagePath="" />-->
 	</ItemGroup>
-
-
-
-	<PropertyGroup Condition="'$(IsWindows)'=='true'">
-		<PackageId>FAkka.$(AssemblyName)</PackageId>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(IsLinux)'=='true'">
-		<PackageId>FAkka.$(AssemblyName).Linux</PackageId>
-	</PropertyGroup>
-
-
-
-	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(IsWindows)'=='true' AND '$(Configuration)' == 'Release'">
-		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell .\PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
-	</Target>
-
-	<Target Name="PostPackNugetDeployLinux" AfterTargets="Pack" Condition="'$(IsLinux)'=='true' AND '$(Configuration)' == 'Release'">
-		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell ./PostBuildEvent.Linux.ps1 FAkka.$(AssemblyName).Linux" />
-	</Target>
 
 	<PropertyGroup Condition="'$(IsWindows)'=='true'">
 		<DefineConstants>Windows</DefineConstants>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(IsOSX)'=='true'">
 		<DefineConstants>OSX</DefineConstants>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(IsLinux)'=='true'">
-		<DefineConstants>Linux</DefineConstants>
 	</PropertyGroup>
 </Project>
