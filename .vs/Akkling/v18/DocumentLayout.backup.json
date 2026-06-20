@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\FAkka.Akkling\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA81EFB-5C88-48EB-9E6A-3092B5C741B7}|src\\Akkling.Persistence\\Akkling.Persistence.fsproj|g:\\fakka.akkling\\src\\akkling.persistence\\akkling.persistence.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4DA81EFB-5C88-48EB-9E6A-3092B5C741B7}|src\\Akkling.Persistence\\Akkling.Persistence.fsproj|solutionrelative:src\\akkling.persistence\\akkling.persistence.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E84AD0-AA58-40F2-93D7-A5AE381D8F15}|src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj|g:\\fakka.akkling\\src\\akkling.cluster.sharding\\akkling.cluster.sharding.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{83E84AD0-AA58-40F2-93D7-A5AE381D8F15}|src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj|solutionrelative:src\\akkling.cluster.sharding\\akkling.cluster.sharding.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D016D8-15C9-4F3A-856A-FA2FF242A639}|src\\Akkling.Streams\\Akkling.Streams.fsproj|g:\\fakka.akkling\\src\\akkling.streams\\akkling.streams.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{85D016D8-15C9-4F3A-856A-FA2FF242A639}|src\\Akkling.Streams\\Akkling.Streams.fsproj|solutionrelative:src\\akkling.streams\\akkling.streams.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6311E40F-824E-4634-8AB1-1B4DB5FD9379}|src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj|g:\\fakka.akkling\\src\\akkling.distributeddata\\akkling.distributeddata.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6311E40F-824E-4634-8AB1-1B4DB5FD9379}|src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj|solutionrelative:src\\akkling.distributeddata\\akkling.distributeddata.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50C125A-0377-4F03-B615-A30A63343ED5}|src\\Akkling\\Akkling.fsproj|g:\\fakka.akkling\\src\\akkling\\akkling.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E50C125A-0377-4F03-B615-A30A63343ED5}|src\\Akkling\\Akkling.fsproj|solutionrelative:src\\akkling\\akkling.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1767400-3117-40FF-83A4-43D6276A82CC}|Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj|g:\\fakka.akkling\\akka\\akka.persistence.fsharp\\akka.persistence.fsharp.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D1767400-3117-40FF-83A4-43D6276A82CC}|Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj|solutionrelative:akka\\akka.persistence.fsharp\\akka.persistence.fsharp.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34051275-B9B0-436E-9736-E80B257B6E78}|Akka\\Akka.FSharp\\Akka.FSharp.fsproj|g:\\fakka.akkling\\akka\\akka.fsharp\\akka.fsharp.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34051275-B9B0-436E-9736-E80B257B6E78}|Akka\\Akka.FSharp\\Akka.FSharp.fsproj|solutionrelative:akka\\akka.fsharp\\akka.fsharp.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34051275-B9B0-436E-9736-E80B257B6E78}|Akka\\Akka.FSharp\\Akka.FSharp.fsproj|g:\\fakka.akkling\\akka\\akka.fsharp\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{34051275-B9B0-436E-9736-E80B257B6E78}|Akka\\Akka.FSharp\\Akka.FSharp.fsproj|solutionrelative:akka\\akka.fsharp\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E84AD0-AA58-40F2-93D7-A5AE381D8F15}|src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj|g:\\fakka.akkling\\src\\akkling.cluster.sharding\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{83E84AD0-AA58-40F2-93D7-A5AE381D8F15}|src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj|solutionrelative:src\\akkling.cluster.sharding\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6311E40F-824E-4634-8AB1-1B4DB5FD9379}|src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj|g:\\fakka.akkling\\src\\akkling.distributeddata\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6311E40F-824E-4634-8AB1-1B4DB5FD9379}|src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj|solutionrelative:src\\akkling.distributeddata\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E04FB08-075D-4E83-8644-B0A5382E78EF}|src\\Akkling.Hocon\\Akkling.Hocon.fsproj|g:\\fakka.akkling\\src\\akkling.hocon\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{4E04FB08-075D-4E83-8644-B0A5382E78EF}|src\\Akkling.Hocon\\Akkling.Hocon.fsproj|solutionrelative:src\\akkling.hocon\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA81EFB-5C88-48EB-9E6A-3092B5C741B7}|src\\Akkling.Persistence\\Akkling.Persistence.fsproj|g:\\fakka.akkling\\src\\akkling.persistence\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{4DA81EFB-5C88-48EB-9E6A-3092B5C741B7}|src\\Akkling.Persistence\\Akkling.Persistence.fsproj|solutionrelative:src\\akkling.persistence\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50C125A-0377-4F03-B615-A30A63343ED5}|src\\Akkling\\Akkling.fsproj|g:\\fakka.akkling\\src\\akkling\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E50C125A-0377-4F03-B615-A30A63343ED5}|src\\Akkling\\Akkling.fsproj|solutionrelative:src\\akkling\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D016D8-15C9-4F3A-856A-FA2FF242A639}|src\\Akkling.Streams\\Akkling.Streams.fsproj|g:\\fakka.akkling\\src\\akkling.streams\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{85D016D8-15C9-4F3A-856A-FA2FF242A639}|src\\Akkling.Streams\\Akkling.Streams.fsproj|solutionrelative:src\\akkling.streams\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1767400-3117-40FF-83A4-43D6276A82CC}|Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj|g:\\fakka.akkling\\akka\\akka.persistence.fsharp\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{D1767400-3117-40FF-83A4-43D6276A82CC}|Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj|solutionrelative:akka\\akka.persistence.fsharp\\postbuildevent.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Cluster.Sharding\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling.Cluster.Sharding\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Cluster.Sharding\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling.Cluster.Sharding\\PostBuildEvent.ps1",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwCQAAABOAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:20:48.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.DistributedData\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling.DistributedData\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.DistributedData\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling.DistributedData\\PostBuildEvent.ps1",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwC0AAAAEAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:19:04.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Akkling.DistributedData.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj",
+              "RelativeDocumentMoniker": "src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj",
+              "RelativeToolTip": "src\\Akkling.DistributedData\\Akkling.DistributedData.fsproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T14:18:37.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Hocon\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling.Hocon\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Hocon\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling.Hocon\\PostBuildEvent.ps1",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwBQAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:17:19.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Akkling.Cluster.Sharding.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj",
+              "RelativeDocumentMoniker": "src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj",
+              "RelativeToolTip": "src\\Akkling.Cluster.Sharding\\Akkling.Cluster.Sharding.fsproj",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T14:16:22.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Persistence\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling.Persistence\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Persistence\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling.Persistence\\PostBuildEvent.ps1",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwC0AAAAEAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:15:11.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Akkling.Persistence.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Persistence\\Akkling.Persistence.fsproj",
+              "RelativeDocumentMoniker": "src\\Akkling.Persistence\\Akkling.Persistence.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Persistence\\Akkling.Persistence.fsproj",
+              "RelativeToolTip": "src\\Akkling.Persistence\\Akkling.Persistence.fsproj",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T14:14:18.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Streams\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling.Streams\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Streams\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling.Streams\\PostBuildEvent.ps1",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwC0AAAAtAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:09:11.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Akkling.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj",
+              "RelativeDocumentMoniker": "src\\Akkling\\Akkling.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj",
+              "RelativeToolTip": "src\\Akkling\\Akkling.fsproj",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T14:05:59.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Akka.Persistence.FSharp.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj",
+              "RelativeDocumentMoniker": "Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj",
+              "RelativeToolTip": "Akka\\Akka.Persistence.FSharp\\Akka.Persistence.FSharp.fsproj",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T13:52:14.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Akkling.Streams.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling.Streams\\Akkling.Streams.fsproj",
+              "RelativeDocumentMoniker": "src\\Akkling.Streams\\Akkling.Streams.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling.Streams\\Akkling.Streams.fsproj",
+              "RelativeToolTip": "src\\Akkling.Streams\\Akkling.Streams.fsproj",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T14:08:48.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\src\\Akkling\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "src\\Akkling\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\src\\Akkling\\PostBuildEvent.ps1",
+              "RelativeToolTip": "src\\Akkling\\PostBuildEvent.ps1",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwBQAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T14:06:57.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "Akka\\Akka.FSharp\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\PostBuildEvent.ps1",
+              "RelativeToolTip": "Akka\\Akka.FSharp\\PostBuildEvent.ps1",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T13:53:45.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PostBuildEvent.ps1",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\Akka\\Akka.Persistence.FSharp\\PostBuildEvent.ps1",
+              "RelativeDocumentMoniker": "Akka\\Akka.Persistence.FSharp\\PostBuildEvent.ps1",
+              "ToolTip": "G:\\FAkka.Akkling\\Akka\\Akka.Persistence.FSharp\\PostBuildEvent.ps1",
+              "RelativeToolTip": "Akka\\Akka.Persistence.FSharp\\PostBuildEvent.ps1",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVDhPlVLdS1RBFP/dux/JrppKUVoISrRSbVGEBq4Z5ZPRk39A9FYPUQ89CUEv2WOC\u002BFRB9QcUPoQkBItUkAa\u002BpNZ\u002BGO2u3nbdVe/evevuzsydZmY/shehM/fMuefMnN/8zuFoEBIOh7m0\u002BwnnnPX39z/0\u002B/1PaiEVVFYCUEI4pYQzRpU6DlMqY9IuLCzwubk5llhP3lFJNdHlJoHkUl8NtG51XV0BIQShUEj/vrw6GY/Hb6qgEHXqOM6\u002BIFJs28b8/Ly86xUAL2vhvwzEVgXZ8984EzIycg1ng0H0BQLKr4tqoqiND18egqYJV\u002BjMu/fo7OpSvk0YvG4dLvFUhXI44j7hGtKGwW\u002BN3agW2ChB6PqGAV9bB1oCQUxveIHOHkwl3VjxdyN3vA/rh0/A1X0ShTJRjysAxphkrQAi0Rjgb8VyWUfcpoDLg/uXevDoQwTPI9t4Y5QQyxZgJBOkAbCXQc4uw\u002BQexPJlME3H7dkVdDV78HbsHJZWk1jL5pHezCG9kdr8B0BSkCzyxTLSjgcRqwKnrRWZHRuO7sLH1DZ2ShTRtAlqbsHKGJ8bAJTSBoMCZfhB3JiJb2EzmkDs7jBGX33Bs8VfOAgGZzsPapnIb\u002BVmGwD1ZEnhN/Xia7YEtruLIy1NuPJ6UXV\u002B6voZPBjshVe0Lp/NwNfanpK5brmZpinnRwEcE0n3Ojk8onkmaUGlVEKxQhBeXILf58Pj0258\u002B2TgQPuhhExRDCzLqvZArN5mDReabARdBYSaihjylzCgZREs/MRoB8HRbAzcyiGTSkRlrmJQLBZVCZpYVwcHlJUDVZ0r6dV9DafOX8Sa8RQvpieZzFXDMD4\u002BXp3X/5CJiQmRC/wBUOeA8MehIQsAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-06T13:53:40.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Akka.FSharp.fsproj",
+              "DocumentMoniker": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+              "RelativeDocumentMoniker": "Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+              "ToolTip": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+              "RelativeToolTip": "Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2026-04-06T13:25:57.697Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

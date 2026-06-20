@@ -1,30 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/workspace/home/work/FAkka.Akkling/src/Akkling/Akkling.fsproj": {}
+    "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj": {}
   },
   "projects": {
-    "/workspace/home/work/FAkka.Akkling/src/Akkling/Akkling.fsproj": {
-      "version": "1.562.10.103-dgx.1",
+    "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj": {
+      "version": "1.569.101.301",
       "restore": {
-        "projectUniqueName": "/workspace/home/work/FAkka.Akkling/src/Akkling/Akkling.fsproj",
+        "projectUniqueName": "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj",
         "projectName": "FAkka.Akkling",
-        "projectPath": "/workspace/home/work/FAkka.Akkling/src/Akkling/Akkling.fsproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/workspace/home/work/FAkka.Akkling/src/Akkling/obj/",
+        "projectPath": "G:\\FAkka.Akkling\\src\\Akkling\\Akkling.fsproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "G:\\FAkka.Akkling\\src\\Akkling\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/root/.dotnet/sdk/10.0.103/FSharp/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\10.0.301\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -34,26 +42,27 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Akka": {
               "target": "Package",
-              "version": "[1.5.62, )",
+              "version": "[1.5.69, )",
               "generatePathProperty": true
             },
             "Akka.Serialization.Hyperion": {
               "target": "Package",
-              "version": "[1.5.62, )",
+              "version": "[1.5.69, )",
               "generatePathProperty": true
             },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[10.0.103, )",
+              "version": "[10.1.301, )",
               "generatePathProperty": true
             }
           },
@@ -73,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/root/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

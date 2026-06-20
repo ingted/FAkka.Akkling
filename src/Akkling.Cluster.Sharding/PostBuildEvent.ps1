@@ -1,4 +1,4 @@
-param(
+﻿param(
     $assembly = "FAkka.Shared"
 )
 function Get-VersionFromFileName {
@@ -18,9 +18,23 @@ function Get-NuGetApiKey {
     }
     return $null
 }
+function Get-LibPacksContent {
+    $currentDir = Get-Location
+
+    while ($currentDir -ne [System.IO.Path]::GetPathRoot($currentDir)) {
+        $libPacksPath = Join-Path -Path $currentDir -ChildPath 'lib-packs.txt'
+        if (Test-Path $libPacksPath) {
+            return Get-Content -Path $libPacksPath -Raw
+        }
+        $currentDir = (Get-Item $currentDir).Parent.FullName
+    }
+
+    Write-Host "lib-packs.txt not found in any parent directory." -ForegroundColor Red
+    return $null
+}
 Write-Host ("[PostBuild] " + $assembly + ": Running in " + $PSVersionTable.OS)
-$binPath = Join-Path (Get-Location).Path "bin"
-if (-not (Test-Path $binPath)) { $binPath = Join-Path (Get-Location).Path "bin2" }
+$binPath = Join-Path (Get-Location).Path "bin/Release"
+if (-not (Test-Path $binPath)) { $binPath = Join-Path (Get-Location).Path "bin" }
 if (Test-Path $binPath) {
     Set-Location $binPath
     $packages = Get-ChildItem "$($assembly)*.nupkg" | Sort-Object -Property { Get-VersionFromFileName $_.Name } -Descending
@@ -29,6 +43,7 @@ if (Test-Path $binPath) {
         return
     }
     $pkg = $packages[0]
+    copy $pkg.FullName $(Get-LibPacksContent)
     $apiKey = Get-NuGetApiKey
     if ($null -eq $apiKey) {
         Write-Host "CRITICAL: NuGet API Key file NOT found!" -ForegroundColor Red

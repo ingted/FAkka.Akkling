@@ -31,9 +31,9 @@
         </PropertyGroup>
         <ItemGroup />
   <ItemGroup>
-    <PackageReference Include="Akka" Version="1.5.62" />
-    <PackageReference Include="Akka.Serialization.Hyperion" Version="1.5.62" />
-    <PackageReference Update="FSharp.Core" Version="10.0.103" />
+    <PackageReference Include="Akka" Version="1.5.69" />
+    <PackageReference Include="Akka.Serialization.Hyperion" Version="1.5.69" />
+    <PackageReference Update="FSharp.Core" Version="10.1.301" />
   </ItemGroup>
 
   <!-- 統一呼叫跨平台腳本 -->

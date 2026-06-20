@@ -1,1 +1,1 @@
-C:\Program Files\dotnet\sdk\10.0.101\FSharp\library-packs
+C:\Program Files\dotnet\sdk\10.0.301\FSharp\library-packs

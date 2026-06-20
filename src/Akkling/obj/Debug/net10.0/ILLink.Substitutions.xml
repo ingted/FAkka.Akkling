@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akkling">
+    <resource name="FSharpSignatureData.Akkling" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akkling" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akkling" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akkling" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akkling" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akkling" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akkling" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akkling" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akkling" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akkling" action="remove"></resource>
+  </assembly>
+</linker>

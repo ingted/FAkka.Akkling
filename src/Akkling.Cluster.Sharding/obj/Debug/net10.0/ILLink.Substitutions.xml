@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akkling.Cluster.Sharding">
+    <resource name="FSharpSignatureData.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akkling.Cluster.Sharding" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akkling.Cluster.Sharding" action="remove"></resource>
+  </assembly>
+</linker>

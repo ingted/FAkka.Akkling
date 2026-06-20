@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akkling.Hocon">
+    <resource name="FSharpSignatureData.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akkling.Hocon" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akkling.Hocon" action="remove"></resource>
+  </assembly>
+</linker>

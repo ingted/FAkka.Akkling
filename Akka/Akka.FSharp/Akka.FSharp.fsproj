@@ -20,7 +20,7 @@
 		<Authors />
 		<Description />
 		<PackageId>FAkka.$(AssemblyName)</PackageId>
-		<Version>1.5.62</Version>
+		<Version>1.5.69</Version>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,11 +33,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Akka.Cluster.Sharding" Version="1.5.69" />
         <PackageReference Include="FSharp.Quotations.Evaluator" Version="2.1.0" />
         <!--<PackageReference Include="FsPickler" Version="5.3.2" />-->
-		<PackageReference Include="FAkka.FsPickler" Version="10.0.103.2-dgx" />
-		<PackageReference Include="Akka" Version="1.5.62" />
-        <PackageReference Update="FSharp.Core" Version="10.0.101" />
+		<PackageReference Include="FAkka.FsPickler" Version="10.1.301" />
+		<PackageReference Include="Akka" Version="1.5.69" />
+        <PackageReference Update="FSharp.Core" Version="10.1.301" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -66,4 +67,9 @@
 	<PropertyGroup Condition="'$(IsOSX)'=='true'">
 		<DefineConstants>OSX</DefineConstants>
 	</PropertyGroup>
+
+
+	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell ./PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+	</Target>
 </Project>

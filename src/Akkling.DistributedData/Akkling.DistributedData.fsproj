@@ -17,12 +17,12 @@
         <PropertyGroup>
                 <PackageId>FAkka.$(AssemblyName)</PackageId>
         </PropertyGroup>
-        <ItemGroup />
   <ItemGroup>
     <!-- 引用剛發布的 FAkka.Akkling -->
-    <PackageReference Include="FAkka.Akkling" Version="1.562.10.103-dgx.1" />
-    <PackageReference Include="Akka.DistributedData" Version="1.5.62" />
-    <PackageReference Update="FSharp.Core" Version="10.0.103" />
+    <PackageReference Include="Akka" Version="1.5.69" />
+    <PackageReference Include="FAkka.Akkling" Version="1.569.101.301" />
+    <PackageReference Include="Akka.DistributedData" Version="1.5.69" />
+    <PackageReference Update="FSharp.Core" Version="10.1.301" />
   </ItemGroup>
 
   <!-- 統一呼叫跨平台腳本 -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="FAkka.Akkling.Tests.7.0">
+    <resource name="FSharpSignatureData.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpOptimizationData.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.FAkka.Akkling.Tests.7.0" action="remove"></resource>
+  </assembly>
+</linker>

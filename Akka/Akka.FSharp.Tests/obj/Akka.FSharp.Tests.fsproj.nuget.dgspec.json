@@ -1,0 +1,291 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\FAkka.Akkling\\Akka\\Akka.FSharp.Tests\\Akka.FSharp.Tests.fsproj": {}
+  },
+  "projects": {
+    "G:\\FAkka.Akkling\\Akka\\Akka.FSharp.Tests\\Akka.FSharp.Tests.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp.Tests\\Akka.FSharp.Tests.fsproj",
+        "projectName": "Akka.FSharp.Tests",
+        "projectPath": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp.Tests\\Akka.FSharp.Tests.fsproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.410\\FSharp\\library-packs": {},
+          "M:\\git\\LocalFeed": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "framework": "net7.0",
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj": {
+                "projectPath": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj"
+              },
+              "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\Akka.Tests.Shared.Internals.csproj": {
+                "projectPath": "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\Akka.Tests.Shared.Internals.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "framework": "net7.0",
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Akka.Cluster.Tools": {
+              "target": "Package",
+              "version": "[1.5.0-alpha3, )",
+              "generatePathProperty": true
+            },
+            "Akka.Remote": {
+              "target": "Package",
+              "version": "[1.5.0-alpha3, )",
+              "generatePathProperty": true
+            },
+            "Akka.Serialization.Hyperion": {
+              "target": "Package",
+              "version": "[1.5.0-alpha3, )",
+              "generatePathProperty": true
+            },
+            "Akka.TestKit.Xunit2": {
+              "target": "Package",
+              "version": "[1.5.0-alpha3, )",
+              "generatePathProperty": true
+            },
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0-preview-20221221-03, )",
+              "generatePathProperty": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )",
+              "generatePathProperty": true
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.5, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj": {
+      "version": "1.5.0",
+      "restore": {
+        "projectUniqueName": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+        "projectName": "FAkka.Akka.FSharp",
+        "projectPath": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\Akka.FSharp.fsproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "G:\\FAkka.Akkling\\Akka\\Akka.FSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.410\\FSharp\\library-packs": {},
+          "M:\\git\\LocalFeed": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "framework": "net7.0",
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "framework": "net7.0",
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Akka": {
+              "target": "Package",
+              "version": "[1.5.0, )",
+              "generatePathProperty": true
+            },
+            "FAkka.FsPickler": {
+              "target": "Package",
+              "version": "[7.0.*, )",
+              "generatePathProperty": true
+            },
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "generatePathProperty": true
+            },
+            "FSharp.Quotations.Evaluator": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\Akka.Tests.Shared.Internals.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\Akka.Tests.Shared.Internals.csproj",
+        "projectName": "Akka.Tests.Shared.Internals",
+        "projectPath": "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\Akka.Tests.Shared.Internals.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "G:\\FAkka.Akkling\\Akka\\Akka.Tests.Shared.Internals\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "M:\\git\\LocalFeed": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "framework": "net7.0",
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "framework": "net7.0",
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Akka.TestKit.Xunit2": {
+              "target": "Package",
+              "version": "[1.5.0-alpha3, )"
+            },
+            "FsCheck.Xunit": {
+              "target": "Package",
+              "version": "[3.0.0-beta2, )"
+            },
+            "Fsharp.Core": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

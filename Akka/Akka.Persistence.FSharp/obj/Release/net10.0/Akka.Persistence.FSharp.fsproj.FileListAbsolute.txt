@@ -1,0 +1,12 @@
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\bin\net10.0\Akka.Persistence.FSharp.deps.json
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\bin\net10.0\Akka.Persistence.FSharp.dll
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\bin\net10.0\Akka.Persistence.FSharp.pdb
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\bin\net10.0\Akka.Persistence.FSharp.xml
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.fsproj.AssemblyReference.cache
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.AssemblyInfoInputs.cache
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.AssemblyInfo.fs
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.fsproj.CoreCompileInputs.cache
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.sourcelink.json
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.dll
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.xml
+G:\FAkka.Akkling\Akka\Akka.Persistence.FSharp\obj\Release\net10.0\Akka.Persistence.FSharp.pdb

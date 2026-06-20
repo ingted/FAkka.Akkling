@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akka.FSharp.Tests">
+    <resource name="FSharpSignatureData.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akka.FSharp.Tests" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akka.FSharp.Tests" action="remove"></resource>
+  </assembly>
+</linker>

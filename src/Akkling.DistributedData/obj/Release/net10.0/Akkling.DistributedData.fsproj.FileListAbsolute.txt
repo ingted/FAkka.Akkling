@@ -12,3 +12,17 @@
 /workspace/home/work/FAkka.Akkling/src/Akkling.DistributedData/obj/Release/net10.0/Akkling.DistributedData.xml
 /workspace/home/work/FAkka.Akkling/src/Akkling.DistributedData/obj/Release/net10.0/Akkling.DistributedData.pdb
 /workspace/home/work/FAkka.Akkling/src/Akkling.DistributedData/obj/Release/net10.0/ref/Akkling.DistributedData.dll
+G:\FAkka.Akkling\src\Akkling.DistributedData\bin\Release\net10.0\Akkling.DistributedData.deps.json
+G:\FAkka.Akkling\src\Akkling.DistributedData\bin\Release\net10.0\Akkling.DistributedData.dll
+G:\FAkka.Akkling\src\Akkling.DistributedData\bin\Release\net10.0\Akkling.DistributedData.pdb
+G:\FAkka.Akkling\src\Akkling.DistributedData\bin\Release\net10.0\Akkling.DistributedData.xml
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.fsproj.AssemblyReference.cache
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.AssemblyInfoInputs.cache
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.AssemblyInfo.fs
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.fsproj.CoreCompileInputs.cache
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.sourcelink.json
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.dll
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\refint\Akkling.DistributedData.dll
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.xml
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\Akkling.DistributedData.pdb
+G:\FAkka.Akkling\src\Akkling.DistributedData\obj\Release\net10.0\ref\Akkling.DistributedData.dll

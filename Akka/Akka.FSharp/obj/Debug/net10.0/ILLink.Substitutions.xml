@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Akka.FSharp">
+    <resource name="FSharpSignatureData.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Akka.FSharp" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Akka.FSharp" action="remove"></resource>
+  </assembly>
+</linker>

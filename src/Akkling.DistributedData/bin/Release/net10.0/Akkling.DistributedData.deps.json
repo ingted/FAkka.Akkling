@@ -6,17 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Akkling.DistributedData/1.562.10.103-dgx.1": {
+      "Akkling.DistributedData/1.569.101.301": {
         "dependencies": {
-          "Akka.DistributedData": "1.5.62",
-          "FAkka.Akkling": "1.562.10.103-dgx.1",
-          "FSharp.Core": "10.0.103"
+          "Akka": "1.5.69",
+          "Akka.DistributedData": "1.5.69",
+          "FAkka.Akkling": "1.569.101.301",
+          "FSharp.Core": "10.1.301"
         },
         "runtime": {
           "Akkling.DistributedData.dll": {}
         }
       },
-      "Akka/1.5.62": {
+      "Akka/1.5.69": {
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "6.0.36",
           "Newtonsoft.Json": "13.0.1",
@@ -24,67 +25,67 @@
         },
         "runtime": {
           "lib/net6.0/Akka.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Cluster/1.5.62": {
+      "Akka.Cluster/1.5.69": {
         "dependencies": {
-          "Akka.Coordination": "1.5.62",
-          "Akka.Remote": "1.5.62"
+          "Akka.Coordination": "1.5.69",
+          "Akka.Remote": "1.5.69"
         },
         "runtime": {
           "lib/net6.0/Akka.Cluster.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Coordination/1.5.62": {
+      "Akka.Coordination/1.5.69": {
         "dependencies": {
-          "Akka": "1.5.62"
+          "Akka": "1.5.69"
         },
         "runtime": {
           "lib/net6.0/Akka.Coordination.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.DistributedData/1.5.62": {
+      "Akka.DistributedData/1.5.69": {
         "dependencies": {
-          "Akka.Cluster": "1.5.62"
+          "Akka.Cluster": "1.5.69"
         },
         "runtime": {
           "lib/net6.0/Akka.DistributedData.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Remote/1.5.62": {
+      "Akka.Remote/1.5.69": {
         "dependencies": {
-          "Akka": "1.5.62",
+          "Akka": "1.5.69",
           "DotNetty.Handlers": "0.7.6",
           "Google.Protobuf": "3.26.1"
         },
         "runtime": {
           "lib/net6.0/Akka.Remote.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Serialization.Hyperion/1.5.62": {
+      "Akka.Serialization.Hyperion/1.5.69": {
         "dependencies": {
-          "Akka": "1.5.62",
+          "Akka": "1.5.69",
           "Hyperion": "0.12.2"
         },
         "runtime": {
           "lib/net6.0/Akka.Serialization.Hyperion.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
@@ -149,24 +150,24 @@
           }
         }
       },
-      "FAkka.Akkling/1.562.10.103-dgx.1": {
+      "FAkka.Akkling/1.569.101.301": {
         "dependencies": {
-          "Akka": "1.5.62",
-          "Akka.Serialization.Hyperion": "1.5.62",
-          "FSharp.Core": "10.0.103"
+          "Akka": "1.5.69",
+          "Akka.Serialization.Hyperion": "1.5.69",
+          "FSharp.Core": "10.1.301"
         },
         "runtime": {
           "lib/net10.0/Akkling.dll": {
-            "assemblyVersion": "1.562.10.103",
-            "fileVersion": "1.562.10.103"
+            "assemblyVersion": "1.569.101.301",
+            "fileVersion": "1.569.101.301"
           }
         }
       },
-      "FSharp.Core/10.0.103": {
+      "FSharp.Core/10.1.301": {
         "runtime": {
           "lib/netstandard2.1/FSharp.Core.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.1.326.7603"
+            "assemblyVersion": "10.1.0.0",
+            "fileVersion": "10.103.126.27133"
           }
         },
         "resources": {
@@ -406,52 +407,52 @@
     }
   },
   "libraries": {
-    "Akkling.DistributedData/1.562.10.103-dgx.1": {
+    "Akkling.DistributedData/1.569.101.301": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Akka/1.5.62": {
+    "Akka/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M8Bp1/DMolS7Vais7xANDBlvEY4zdTHjW8Ov8lobwyEoC6ov7IOlJEqfmHzmtne3UBRTP3WwaHI5uKJfqbRxZQ==",
-      "path": "akka/1.5.62",
-      "hashPath": "akka.1.5.62.nupkg.sha512"
+      "sha512": "sha512-dbLN/+koxxiS2yKx+yt3pBmPrmC/N2nkjMasc+g/P1R+A2aV9iMPLNYTwFD+ekQBHiDWPanVFHHCldBnTEd0+A==",
+      "path": "akka/1.5.69",
+      "hashPath": "akka.1.5.69.nupkg.sha512"
     },
-    "Akka.Cluster/1.5.62": {
+    "Akka.Cluster/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-B9hvvHjAtL/5+p50wbjXIgKRSjZIt7bw2dywzR0lq8t+jzUs10LK0xYAYKcx7oED7hjt7aZ1Ntv0Y2ufsvzIzA==",
-      "path": "akka.cluster/1.5.62",
-      "hashPath": "akka.cluster.1.5.62.nupkg.sha512"
+      "sha512": "sha512-MtGFYubmP/5DlVizLEweYa54qJ2/whOhO4pYjiEIUzd8Pi4MGads/cVRma15//DqV1RSGOzO2zOfGS6gQx8cAA==",
+      "path": "akka.cluster/1.5.69",
+      "hashPath": "akka.cluster.1.5.69.nupkg.sha512"
     },
-    "Akka.Coordination/1.5.62": {
+    "Akka.Coordination/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BHHKUcru3PonFAjhWviM6XEzxOWGR4HPqlr3DanoslrF06DdzsUvPzLrO+IXHNKNMSs5Ihq67Da4rRIQh5efpw==",
-      "path": "akka.coordination/1.5.62",
-      "hashPath": "akka.coordination.1.5.62.nupkg.sha512"
+      "sha512": "sha512-F/ZpPQJVuE+vLhmU0HHcGCzbcCjb7iZhMrWjVtJZwqlmP1IJ9z8Xj7fZ6gCGifJoCinIoHDFzOMC3X5mF8DiQA==",
+      "path": "akka.coordination/1.5.69",
+      "hashPath": "akka.coordination.1.5.69.nupkg.sha512"
     },
-    "Akka.DistributedData/1.5.62": {
+    "Akka.DistributedData/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-09OYyAlFQj5HkrMEVd7KHtmCP6N4FbaR1O6CQULEesFPpHTRcJJ8XAKdQmQmkO/5YVZ9d2C6TyvHepozkU+miw==",
-      "path": "akka.distributeddata/1.5.62",
-      "hashPath": "akka.distributeddata.1.5.62.nupkg.sha512"
+      "sha512": "sha512-+wbFfnYJ7477Zy+lQa43QwOZpsXL6lQ1uJdHqI9APFFNQvUEbgmIZRkuTSF04LFqQ/6MPeQ0vA708vxDHGO5Dw==",
+      "path": "akka.distributeddata/1.5.69",
+      "hashPath": "akka.distributeddata.1.5.69.nupkg.sha512"
     },
-    "Akka.Remote/1.5.62": {
+    "Akka.Remote/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TDHQD9NA5677MR7dkwFeT5oDKttfHu3dqA7diBxTJ1ellJdqTaANBFKaw79uxaatpWah1BiBBu4QcVZoCUKs6A==",
-      "path": "akka.remote/1.5.62",
-      "hashPath": "akka.remote.1.5.62.nupkg.sha512"
+      "sha512": "sha512-sXXjaMQevyRymxy2jsZx4a7VeHDXI62FITno+02cr3kcerzQ118Bkg+WFPIcoBo5fbdOEab2vU8iSh6xeIFP5g==",
+      "path": "akka.remote/1.5.69",
+      "hashPath": "akka.remote.1.5.69.nupkg.sha512"
     },
-    "Akka.Serialization.Hyperion/1.5.62": {
+    "Akka.Serialization.Hyperion/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1UXTD1D6AIa8ErezhhWN6gaCH7hzrP+lYP898Vz9uzo5MEi+2coy6wJmTWD1HiBumOfbhn2UpBzIYmKnby7C9A==",
-      "path": "akka.serialization.hyperion/1.5.62",
-      "hashPath": "akka.serialization.hyperion.1.5.62.nupkg.sha512"
+      "sha512": "sha512-w/Y/l5aLEF8qhbcrSs47I3tEfIU6opXL4yaHwVVfFtLUumNXFcfmMi4Vt/7P5n5bWWtKJ22cC2hx92S/1xN+HQ==",
+      "path": "akka.serialization.hyperion/1.5.69",
+      "hashPath": "akka.serialization.hyperion.1.5.69.nupkg.sha512"
     },
     "DotNetty.Buffers/0.7.6": {
       "type": "package",
@@ -488,19 +489,19 @@
       "path": "dotnetty.transport/0.7.6",
       "hashPath": "dotnetty.transport.0.7.6.nupkg.sha512"
     },
-    "FAkka.Akkling/1.562.10.103-dgx.1": {
+    "FAkka.Akkling/1.569.101.301": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-myp8r7XLljjvzGxCgATwMiEJG3VRq+2MNcocyYvRGncLMRWP1dgfEVZ3KrRfWDIHgpg1gGX/tBqNdjxxKrNW6Q==",
-      "path": "fakka.akkling/1.562.10.103-dgx.1",
-      "hashPath": "fakka.akkling.1.562.10.103-dgx.1.nupkg.sha512"
+      "sha512": "sha512-zTacBivq0dmGfRks1gtNB8A1lzfm5XNb2694k670rLvpzj+eU4MEv9ezIAZ+hxvtZWCzsSL7fzt9r5j6aB6bJw==",
+      "path": "fakka.akkling/1.569.101.301",
+      "hashPath": "fakka.akkling.1.569.101.301.nupkg.sha512"
     },
-    "FSharp.Core/10.0.103": {
+    "FSharp.Core/10.1.301": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ju6/4O0BKVwwW6nxdH2B55uoR6jVk7vTyEMpgbb82l44hhgpXr79gqZa2k85xOv418t1JVGZIHljvgazTveFrQ==",
-      "path": "fsharp.core/10.0.103",
-      "hashPath": "fsharp.core.10.0.103.nupkg.sha512"
+      "sha512": "sha512-excLf2zM/qUB3WhRUfI0xvOOaPwcRAEdYT/BXe9eiTKySnWVuIKMQTf5+6ETy5nsb1dpLp1s2j2yAM/XcRgFMg==",
+      "path": "fsharp.core/10.1.301",
+      "hashPath": "fsharp.core.10.1.301.nupkg.sha512"
     },
     "Google.Protobuf/3.26.1": {
       "type": "package",

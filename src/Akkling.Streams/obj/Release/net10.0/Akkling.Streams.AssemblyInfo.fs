@@ -10,10 +10,10 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("Akkling.Streams")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Release")>]
 [<assembly: System.Reflection.AssemblyCopyrightAttribute("Bartosz Sypytkowski and contributors")>]
-[<assembly: System.Reflection.AssemblyFileVersionAttribute("1.562.10.103")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.562.10.103-dgx.1+d0b8d9b04430de75b8562745a173e10282e8102c")>]
+[<assembly: System.Reflection.AssemblyFileVersionAttribute("1.569.101.301")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.569.101.301+022f3432c7c35925e8042d926a208fc8e52bd383")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("Akkling.Streams")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("Akkling.Streams")>]
-[<assembly: System.Reflection.AssemblyVersionAttribute("1.562.10.103")>]
+[<assembly: System.Reflection.AssemblyVersionAttribute("1.569.101.301")>]
 [<assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/Horusiath/Akkling")>]
 do()

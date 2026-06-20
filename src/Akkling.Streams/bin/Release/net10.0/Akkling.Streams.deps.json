@@ -6,17 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Akkling.Streams/1.562.10.103-dgx.1": {
+      "Akkling.Streams/1.569.101.301": {
         "dependencies": {
-          "Akka.Streams": "1.5.62",
-          "FAkka.Akkling": "1.562.10.103-dgx.1",
-          "FSharp.Core": "10.0.103"
+          "Akka": "1.5.69",
+          "Akka.Streams": "1.5.69",
+          "FAkka.Akkling": "1.569.101.301",
+          "FSharp.Core": "10.1.301"
         },
         "runtime": {
           "Akkling.Streams.dll": {}
         }
       },
-      "Akka/1.5.62": {
+      "Akka/1.5.69": {
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "6.0.36",
           "Newtonsoft.Json": "13.0.1",
@@ -24,54 +25,54 @@
         },
         "runtime": {
           "lib/net6.0/Akka.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Serialization.Hyperion/1.5.62": {
+      "Akka.Serialization.Hyperion/1.5.69": {
         "dependencies": {
-          "Akka": "1.5.62",
+          "Akka": "1.5.69",
           "Hyperion": "0.12.2"
         },
         "runtime": {
           "lib/net6.0/Akka.Serialization.Hyperion.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "Akka.Streams/1.5.62": {
+      "Akka.Streams/1.5.69": {
         "dependencies": {
-          "Akka": "1.5.62",
+          "Akka": "1.5.69",
           "Google.Protobuf": "3.26.1",
           "Reactive.Streams": "1.0.4"
         },
         "runtime": {
           "lib/net6.0/Akka.Streams.dll": {
-            "assemblyVersion": "1.5.62.0",
-            "fileVersion": "1.5.62.0"
+            "assemblyVersion": "1.5.69.0",
+            "fileVersion": "1.5.69.0"
           }
         }
       },
-      "FAkka.Akkling/1.562.10.103-dgx.1": {
+      "FAkka.Akkling/1.569.101.301": {
         "dependencies": {
-          "Akka": "1.5.62",
-          "Akka.Serialization.Hyperion": "1.5.62",
-          "FSharp.Core": "10.0.103"
+          "Akka": "1.5.69",
+          "Akka.Serialization.Hyperion": "1.5.69",
+          "FSharp.Core": "10.1.301"
         },
         "runtime": {
           "lib/net10.0/Akkling.dll": {
-            "assemblyVersion": "1.562.10.103",
-            "fileVersion": "1.562.10.103"
+            "assemblyVersion": "1.569.101.301",
+            "fileVersion": "1.569.101.301"
           }
         }
       },
-      "FSharp.Core/10.0.103": {
+      "FSharp.Core/10.1.301": {
         "runtime": {
           "lib/netstandard2.1/FSharp.Core.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.1.326.7603"
+            "assemblyVersion": "10.1.0.0",
+            "fileVersion": "10.103.126.27133"
           }
         },
         "resources": {
@@ -258,45 +259,45 @@
     }
   },
   "libraries": {
-    "Akkling.Streams/1.562.10.103-dgx.1": {
+    "Akkling.Streams/1.569.101.301": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Akka/1.5.62": {
+    "Akka/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M8Bp1/DMolS7Vais7xANDBlvEY4zdTHjW8Ov8lobwyEoC6ov7IOlJEqfmHzmtne3UBRTP3WwaHI5uKJfqbRxZQ==",
-      "path": "akka/1.5.62",
-      "hashPath": "akka.1.5.62.nupkg.sha512"
+      "sha512": "sha512-dbLN/+koxxiS2yKx+yt3pBmPrmC/N2nkjMasc+g/P1R+A2aV9iMPLNYTwFD+ekQBHiDWPanVFHHCldBnTEd0+A==",
+      "path": "akka/1.5.69",
+      "hashPath": "akka.1.5.69.nupkg.sha512"
     },
-    "Akka.Serialization.Hyperion/1.5.62": {
+    "Akka.Serialization.Hyperion/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1UXTD1D6AIa8ErezhhWN6gaCH7hzrP+lYP898Vz9uzo5MEi+2coy6wJmTWD1HiBumOfbhn2UpBzIYmKnby7C9A==",
-      "path": "akka.serialization.hyperion/1.5.62",
-      "hashPath": "akka.serialization.hyperion.1.5.62.nupkg.sha512"
+      "sha512": "sha512-w/Y/l5aLEF8qhbcrSs47I3tEfIU6opXL4yaHwVVfFtLUumNXFcfmMi4Vt/7P5n5bWWtKJ22cC2hx92S/1xN+HQ==",
+      "path": "akka.serialization.hyperion/1.5.69",
+      "hashPath": "akka.serialization.hyperion.1.5.69.nupkg.sha512"
     },
-    "Akka.Streams/1.5.62": {
+    "Akka.Streams/1.5.69": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3lWOqFo/YJ1CZoX76f8jfk/J74rCPI6rlyOvq+wz5ZD+6I4AEL+gEg1id2QU/0iL6vA8E0wiDr5aQWSFN7RN0w==",
-      "path": "akka.streams/1.5.62",
-      "hashPath": "akka.streams.1.5.62.nupkg.sha512"
+      "sha512": "sha512-AeWIMglgOyxc/BvBmiv5aZUOB4xysBm5mmQJor9kRvszSwwvJum4MLB+aMThK4+Jw1I86OixsErmAQ9ccns0ag==",
+      "path": "akka.streams/1.5.69",
+      "hashPath": "akka.streams.1.5.69.nupkg.sha512"
     },
-    "FAkka.Akkling/1.562.10.103-dgx.1": {
+    "FAkka.Akkling/1.569.101.301": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-myp8r7XLljjvzGxCgATwMiEJG3VRq+2MNcocyYvRGncLMRWP1dgfEVZ3KrRfWDIHgpg1gGX/tBqNdjxxKrNW6Q==",
-      "path": "fakka.akkling/1.562.10.103-dgx.1",
-      "hashPath": "fakka.akkling.1.562.10.103-dgx.1.nupkg.sha512"
+      "sha512": "sha512-zTacBivq0dmGfRks1gtNB8A1lzfm5XNb2694k670rLvpzj+eU4MEv9ezIAZ+hxvtZWCzsSL7fzt9r5j6aB6bJw==",
+      "path": "fakka.akkling/1.569.101.301",
+      "hashPath": "fakka.akkling.1.569.101.301.nupkg.sha512"
     },
-    "FSharp.Core/10.0.103": {
+    "FSharp.Core/10.1.301": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ju6/4O0BKVwwW6nxdH2B55uoR6jVk7vTyEMpgbb82l44hhgpXr79gqZa2k85xOv418t1JVGZIHljvgazTveFrQ==",
-      "path": "fsharp.core/10.0.103",
-      "hashPath": "fsharp.core.10.0.103.nupkg.sha512"
+      "sha512": "sha512-excLf2zM/qUB3WhRUfI0xvOOaPwcRAEdYT/BXe9eiTKySnWVuIKMQTf5+6ETy5nsb1dpLp1s2j2yAM/XcRgFMg==",
+      "path": "fsharp.core/10.1.301",
+      "hashPath": "fsharp.core.10.1.301.nupkg.sha512"
     },
     "Google.Protobuf/3.26.1": {
       "type": "package",

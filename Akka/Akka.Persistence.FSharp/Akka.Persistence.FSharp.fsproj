@@ -21,8 +21,6 @@
 		<Description />
     </PropertyGroup>
 
-    <ItemGroup />
-
     <ItemGroup>
         <Compile Include="FsApi.fs" />
         <!--<Content Include="LICENSE.txt" />-->
@@ -48,18 +46,17 @@
 	<PropertyGroup>
 		<PackageId>FAkka.$(AssemblyName)</PackageId>
 		<!--<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>-->
-		<Version>1.5.62</Version>
+		<Version>1.5.69</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="/" />
-		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.62" />
-		<PackageReference Include="Akka.Persistence" Version="1.5.62" />
-		<PackageReference Include="FSharp.Core" Version="10.0.105" />
+		<PackageReference Include="Akka" Version="1.5.69" />
+		<PackageReference Include="Akka.Cluster.Sharding" Version="1.5.69" />
+		<PackageReference Include="FAkka.Akka.FSharp" Version="1.5.69" />
+		<PackageReference Include="Akka.Persistence" Version="1.5.69" />
+		<PackageReference Include="FSharp.Core" Version="10.1.201" />
 		<PackageReference Include="FSharp.Quotations.Evaluator" Version="2.1.0" />
-	</ItemGroup>
-
-	<ItemGroup>
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(IsWindows)'=='true'">
@@ -68,4 +65,9 @@
 	<PropertyGroup Condition="'$(IsOSX)'=='true'">
 		<DefineConstants>OSX</DefineConstants>
 	</PropertyGroup>
+
+
+	<Target Name="PostPackNugetDeployWindows" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+		<Exec Command="powershell -c &quot;write-host '====== Start Post-Build Event ======'&quot;&#xD;&#xA;powershell ./PostBuildEvent.ps1 FAkka.$(AssemblyName)" />
+	</Target>
 </Project>

@@ -11,18 +11,18 @@
     <description>Package Description</description>
     <copyright>Bartosz Sypytkowski and contributors</copyright>
     <tags>akka.net fsharp akkling</tags>
-    <repository type="git" url="https://github.com/Horusiath/Akkling" commit="d0b8d9b04430de75b8562745a173e10282e8102c" />
+    <repository type="git" url="https://github.com/Horusiath/Akkling" commit="022f3432c7c35925e8042d926a208fc8e52bd383" />
     <dependencies>
       <group targetFramework="net10.0">
-        <dependency id="Akka" version="1.5.62" exclude="Build,Analyzers" />
-        <dependency id="Akka.Serialization.Hyperion" version="1.5.62" exclude="Build,Analyzers" />
-        <dependency id="FSharp.Core" version="10.0.103" exclude="Build,Analyzers" />
+        <dependency id="Akka" version="1.5.64" exclude="Build,Analyzers" />
+        <dependency id="Akka.Serialization.Hyperion" version="1.5.64" exclude="Build,Analyzers" />
+        <dependency id="FSharp.Core" version="10.1.201" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.dll" target="lib/net10.0/Akkling.dll" />
-    <file src="/workspace/home/work/FAkka.Akkling/src/Akkling/bin/Release/net10.0/Akkling.xml" target="lib/net10.0/Akkling.xml" />
-    <file src="/workspace/home/work/FAkka.Akkling/README.md" target="/README.md" />
+    <file src="G:\FAkka.Akkling\src\Akkling\bin\Release\net10.0\Akkling.dll" target="lib\net10.0\Akkling.dll" />
+    <file src="G:\FAkka.Akkling\src\Akkling\bin\Release\net10.0\Akkling.xml" target="lib\net10.0\Akkling.xml" />
+    <file src="G:\FAkka.Akkling\README.md" target="\README.md" />
   </files>
 </package>

@@ -12,12 +12,12 @@
     <None Include="PostBuildEvent.ps1" />
     <Compile Include="Library.fs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <PackageReference Include="Akka" Version="1.5.64" />
     <PackageReference Include="FAkka.Akkling" Version="1.562.10.103-dgx.1" />
     <PackageReference Include="FAkka.Akkling.TestKit" Version="1.562.10.103-dgx.1" />
     <PackageReference Include="Akka.Streams.TestKit" Version="1.5.62" />
-    <PackageReference Update="FSharp.Core" Version="10.0.103" />
+    <PackageReference Update="FSharp.Core" Version="10.1.201" />
   </ItemGroup>
         <PropertyGroup>
                 <PackageId>FAkka.$(AssemblyName)</PackageId>

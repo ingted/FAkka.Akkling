@@ -12,3 +12,17 @@
 /workspace/home/work/FAkka.Akkling/src/Akkling.Persistence/obj/Release/net10.0/Akkling.Persistence.xml
 /workspace/home/work/FAkka.Akkling/src/Akkling.Persistence/obj/Release/net10.0/Akkling.Persistence.pdb
 /workspace/home/work/FAkka.Akkling/src/Akkling.Persistence/obj/Release/net10.0/ref/Akkling.Persistence.dll
+G:\FAkka.Akkling\src\Akkling.Persistence\bin\Release\net10.0\Akkling.Persistence.deps.json
+G:\FAkka.Akkling\src\Akkling.Persistence\bin\Release\net10.0\Akkling.Persistence.dll
+G:\FAkka.Akkling\src\Akkling.Persistence\bin\Release\net10.0\Akkling.Persistence.pdb
+G:\FAkka.Akkling\src\Akkling.Persistence\bin\Release\net10.0\Akkling.Persistence.xml
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.fsproj.AssemblyReference.cache
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.AssemblyInfoInputs.cache
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.AssemblyInfo.fs
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.fsproj.CoreCompileInputs.cache
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.sourcelink.json
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.dll
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\refint\Akkling.Persistence.dll
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.xml
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\Akkling.Persistence.pdb
+G:\FAkka.Akkling\src\Akkling.Persistence\obj\Release\net10.0\ref\Akkling.Persistence.dll

@@ -1,0 +1,12 @@
+G:\FAkka.Akkling\Akka\Akka.FSharp\bin\net10.0\Akka.FSharp.deps.json
+G:\FAkka.Akkling\Akka\Akka.FSharp\bin\net10.0\Akka.FSharp.dll
+G:\FAkka.Akkling\Akka\Akka.FSharp\bin\net10.0\Akka.FSharp.pdb
+G:\FAkka.Akkling\Akka\Akka.FSharp\bin\net10.0\Akka.FSharp.xml
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.fsproj.AssemblyReference.cache
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.AssemblyInfoInputs.cache
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.AssemblyInfo.fs
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.fsproj.CoreCompileInputs.cache
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.sourcelink.json
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.dll
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.xml
+G:\FAkka.Akkling\Akka\Akka.FSharp\obj\Debug\net10.0\Akka.FSharp.pdb

@@ -12,3 +12,17 @@
 /workspace/home/work/FAkka.Akkling/src/Akkling.Streams/obj/Release/net10.0/Akkling.Streams.xml
 /workspace/home/work/FAkka.Akkling/src/Akkling.Streams/obj/Release/net10.0/Akkling.Streams.pdb
 /workspace/home/work/FAkka.Akkling/src/Akkling.Streams/obj/Release/net10.0/ref/Akkling.Streams.dll
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.dll
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\refint\Akkling.Streams.dll
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.xml
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.pdb
+G:\FAkka.Akkling\src\Akkling.Streams\bin\Release\net10.0\Akkling.Streams.deps.json
+G:\FAkka.Akkling\src\Akkling.Streams\bin\Release\net10.0\Akkling.Streams.dll
+G:\FAkka.Akkling\src\Akkling.Streams\bin\Release\net10.0\Akkling.Streams.pdb
+G:\FAkka.Akkling\src\Akkling.Streams\bin\Release\net10.0\Akkling.Streams.xml
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.fsproj.AssemblyReference.cache
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.AssemblyInfoInputs.cache
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.AssemblyInfo.fs
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.fsproj.CoreCompileInputs.cache
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\Akkling.Streams.sourcelink.json
+G:\FAkka.Akkling\src\Akkling.Streams\obj\Release\net10.0\ref\Akkling.Streams.dll
